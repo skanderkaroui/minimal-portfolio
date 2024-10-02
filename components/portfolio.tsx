@@ -54,17 +54,23 @@ export function PortfolioComponent() {
             <Link href="#contact" className="hover:underline">Contact</Link>
           </nav>
           <div className="flex justify-center space-x-4">
-            <Button variant="ghost" size="icon">
-              <Mail className="h-5 w-5" />
-              <span className="sr-only">Email</span>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="mailto:skander.karoui@gmail.com">
+                <Mail className="h-5 w-5" />
+                <span className="sr-only">Email</span>
+              </Link>
             </Button>
-            <Button variant="ghost" size="icon">
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://github.com/skanderkaroui" target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </Link>
             </Button>
-            <Button variant="ghost" size="icon">
-              <Linkedin className="h-5 w-5" />
-              <span className="sr-only">LinkedIn</span>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://www.linkedin.com/in/skander-karoui" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </Link>
             </Button>
           </div>
         </header>
