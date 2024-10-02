@@ -1,0 +1,14 @@
+[
+    {
+      "title": "Task Manager Pro",
+      "description": "Efficient task management application",
+      "content": "A sleek web application for efficient task management, built with React and Node.js.",
+      "link": "#"
+    },
+    {
+      "title": "Artisan Market",
+      "description": "E-commerce platform for artisans",
+      "content": "An e-commerce platform connecting artisans with customers, powered by Next.js and Stripe.",
+      "link": "#"
+    }
+  ]

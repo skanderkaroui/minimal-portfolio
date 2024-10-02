@@ -9,6 +9,8 @@ import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
+import projectsData from '@/app/data/projects.json'
+
 export function PortfolioComponent() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
@@ -71,10 +73,9 @@ export function PortfolioComponent() {
           <section id="about">
             <h2 className="text-2xl font-semibold mb-4">About Me</h2>
             <p className="text-muted-foreground">
-              I'm a passionate full stack developer with 5 years of experience in building web applications. 
-              I specialize in React, Node.js, and cloud technologies, creating efficient and scalable solutions 
-              for complex problems. When I'm not coding, you can find me exploring new hiking trails or experimenting 
-              with new recipes in the kitchen.
+            I am a final-year engineering student from Tunisia pursuing a degree in ICT engineering.
+            I am highly involved in my local community and have a strong passion for advancing AI and Data Science,
+            with a particular interest in software engineering and AI.
             </p>
           </section>
 
@@ -83,42 +84,26 @@ export function PortfolioComponent() {
             <div className="relative">
               <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex">
-                  <div className="flex-[0_0_100%] min-w-0 pl-4">
-                    <Card>
-                      <CardHeader>
-                        <CardTitle>Task Manager Pro</CardTitle>
-                        <CardDescription>Efficient task management application</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">
-                          A sleek web application for efficient task management, built with React and Node.js.
-                        </p>
-                      </CardContent>
-                      <CardFooter>
-                        <Link href="#" className="text-primary hover:underline inline-flex items-center">
-                          View Project <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </CardFooter>
-                    </Card>
-                  </div>
-                  <div className="flex-[0_0_100%] min-w-0 pl-4">
-                    <Card>
-                      <CardHeader>
-                        <CardTitle>Artisan Market</CardTitle>
-                        <CardDescription>E-commerce platform for artisans</CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-muted-foreground">
-                          An e-commerce platform connecting artisans with customers, powered by Next.js and Stripe.
-                        </p>
-                      </CardContent>
-                      <CardFooter>
-                        <Link href="#" className="text-primary hover:underline inline-flex items-center">
-                          View Project <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </CardFooter>
-                    </Card>
-                  </div>
+                  {projectsData.map((project, index) => (
+                    <div key={index} className="flex-[0_0_100%] min-w-0 pl-4">
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>{project.title}</CardTitle>
+                          <CardDescription>{project.description}</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-muted-foreground">
+                            {project.content}
+                          </p>
+                        </CardContent>
+                        <CardFooter>
+                          <Link href={project.link} className="text-primary hover:underline inline-flex items-center">
+                            View Project <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
+                        </CardFooter>
+                      </Card>
+                    </div>
+                  ))}
                 </div>
               </div>
               <Button 
