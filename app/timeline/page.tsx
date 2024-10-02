@@ -9,8 +9,8 @@ export default function TimelinePage() {
       events: [
         "Launched a new AI-powered chatbot for customer service",
         "Attended TechCon 2024 in San Francisco",
-        "Attended TechCon 2024 in San Francisco",
-        "Attended TechCon 2024 in San Francisco",
+        "Presented research on AI ethics at local university",
+        "Contributed to open-source NLP library",
       ],
     },
     {
