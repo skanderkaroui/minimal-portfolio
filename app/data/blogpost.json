@@ -1,0 +1,34 @@
+[
+    {
+      "id": "1",
+      "titleUrl": "getting-started-with-nextjs-13",
+      "title": "Getting Started with Next.js 13",
+      "description": "Learn how to set up and use the latest features of Next.js 13 in your projects.",
+      "date": "October 15, 2024",
+      "readTime": "5 min read"
+    },
+    {
+      "id": "2",
+      "titleUrl": "power-of-server-components-in-react",
+      "title": "The Power of Server Components in React",
+      "description": "Explore how Server Components can improve your React application's performance and user experience.",
+      "date": "September 28, 2024",
+      "readTime": "7 min read"
+    },
+    {
+      "id": "3",
+      "titleUrl": "mastering-typescript-advanced-tips-and-tricks",
+      "title": "Mastering TypeScript: Advanced Tips and Tricks",
+      "description": "Dive deep into TypeScript with these advanced techniques to write more robust and maintainable code.",
+      "date": "September 10, 2024",
+      "readTime": "10 min read"
+    },
+    {
+      "id": "4",
+      "titleUrl": "building-accessible-web-applications",
+      "title": "Building Accessible Web Applications",
+      "description": "Learn best practices for creating web applications that are accessible to all users.",
+      "date": "August 22, 2024",
+      "readTime": "8 min read"
+    }
+  ]
