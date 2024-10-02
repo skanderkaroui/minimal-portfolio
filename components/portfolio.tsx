@@ -132,7 +132,7 @@ export function PortfolioComponent() {
           <section id="contact">
             <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
             <p className="text-muted-foreground mb-4">
-              I'm always open to new opportunities and collaborations. Feel free to reach out!
+              I&apos;m always open to new opportunities and collaborations. Feel free to reach out!
             </p>
             <Button asChild>
               <Link href="mailto:skander.karoui@gmail.com">
