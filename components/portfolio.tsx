@@ -50,8 +50,8 @@ export function PortfolioComponent() {
           <p className="text-lg md:text-xl text-muted-foreground mb-4">AI & Software Engineering Student</p>
           <nav className="flex flex-wrap justify-center space-x-4 mb-4">
             <Link href="#about" className="hover:underline">About</Link>  
-            <Link href="#projects" className="hover:underline">Projects</Link>
-            <Link href="#contact" className="hover:underline">Contact</Link>
+            {/*<Link href="#projects" className="hover:underline">Projects</Link>
+            <Link href="#contact" className="hover:underline">Contact</Link> */}
             <Link href="/timeline" className="hover:underline">Timeline</Link>
             <Link href="/blog" className="hover:underline">Blog</Link>
           </nav>
