@@ -151,7 +151,7 @@ export function PortfolioComponent() {
         </main>
 
         <footer className="mt-16 text-center text-muted-foreground">
-          <p>© 2024 Skander Karoui. All rights reserved.</p>
+          <p>© 2024 Skander Karoui. No rights reserved.</p>
         </footer>
       </div>
     </div>
