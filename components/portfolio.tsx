@@ -52,6 +52,7 @@ export function PortfolioComponent() {
             <Link href="#about" className="hover:underline">About</Link>  
             <Link href="#projects" className="hover:underline">Projects</Link>
             <Link href="#contact" className="hover:underline">Contact</Link>
+            <Link href="/timeline" className="hover:underline">Timeline</Link>
           </nav>
           <div className="flex justify-center space-x-4">
             <Button variant="ghost" size="icon" asChild>
