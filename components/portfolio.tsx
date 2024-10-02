@@ -34,7 +34,7 @@ export function PortfolioComponent() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="max-w-4xl mx-auto px-4 py-8 md:py-16">
+      <div className="max-w-4xl mx-auto px-4 py-24 md:py-20">
         <header className="mb-16 text-center relative">
           <Button
             variant="ghost"
