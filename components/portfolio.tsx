@@ -47,7 +47,12 @@ export function PortfolioComponent() {
             <span className="sr-only">Toggle theme</span>
           </Button>
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Skander Karoui</h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-4">AI & Software Engineering Student</p>
+          <p className="text-lg md:text-xl text-muted-foreground">
+            Telecommunication Engineering Student
+          </p>
+          <p className="text-lg md:text-xl text-muted-foreground mb-4">
+            passionate about <span className="font-bold text-primary">AI</span> & <span className="font-bold text-primary">Software Engineering</span>
+          </p>
           <nav className="flex flex-wrap justify-center space-x-4 mb-4">
             <Link href="#about" className="hover:underline">About</Link>  
             {/*<Link href="#projects" className="hover:underline">Projects</Link>
