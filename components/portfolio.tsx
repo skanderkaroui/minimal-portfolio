@@ -10,7 +10,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 import projectsData from '@/app/data/projects.json'
-import recommendationImg from '@/app/data/images/recommendation.jpg'
+import RecommendationImg from '@/app/data/images/recommendation.jpg'
+import DefaultImg from '@/app/data/images/cat.jpeg'
+
+const projectImages = {
+  "1": RecommendationImg,
+};
 
 export function PortfolioComponent() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
@@ -108,7 +113,7 @@ export function PortfolioComponent() {
                         <CardContent>
                           <div className="relative w-full h-48 mb-4">
                             <Image
-                              src={project.imageUrl}
+                              src={projectImages[project.id.toString() as keyof typeof projectImages] || DefaultImg}
                               alt={project.title}
                               fill
                               style={{ objectFit: "cover" }}

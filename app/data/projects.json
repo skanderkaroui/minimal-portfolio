@@ -1,16 +1,16 @@
 [
     {
+      "id": 1,
       "title": "Movie Recommendation System",
       "description": "",
       "content": "Recommendation system that explores content-based, user-based, collaborative filtering and item-based collaborative filtering",
-      "imageUrl": "recommendationImg",
       "link": "https://github.com/skanderkaroui/collaborative_filtering_movie_recommendation"
     },
     {
+      "id": 2,
       "title": "Artisan Market",
       "description": "E-commerce platform for artisans",
       "content": "An e-commerce platform connecting artisans with customers, powered by Next.js and Stripe.",
-      "imageUrl": "",
       "link": "#"
     }
   ]
