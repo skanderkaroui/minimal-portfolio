@@ -84,7 +84,7 @@ export function PortfolioComponent() {
 
         <main className="space-y-16">
           <section id="about">
-            <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+            {/* <h2 className="text-2xl font-semibold mb-4">About Me</h2> */}
             <p className="text-muted-foreground">
             I am a final-year engineering student from Tunisia pursuing a degree in ICT engineering.
             I am highly involved in my local community and have a strong passion for advancing AI and Data Science,
