@@ -5,11 +5,12 @@ import Link from "next/link"
 import { useState, useEffect, useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { useTheme } from "next-themes"
-
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 import projectsData from '@/app/data/projects.json'
+import recommendationImg from '@/app/data/images/recommendation.jpg'
 
 export function PortfolioComponent() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
@@ -104,6 +105,17 @@ export function PortfolioComponent() {
                           <CardTitle>{project.title}</CardTitle>
                           <CardDescription>{project.description}</CardDescription>
                         </CardHeader>
+                        <CardContent>
+                          <div className="relative w-full h-48 mb-4">
+                            <Image
+                              src={project.imageUrl}
+                              alt={project.title}
+                              fill
+                              style={{ objectFit: "cover" }}
+                              className="rounded-md"
+                            />
+                          </div>
+                        </CardContent>
                         <CardContent>
                           <p className="text-muted-foreground">
                             {project.content}
