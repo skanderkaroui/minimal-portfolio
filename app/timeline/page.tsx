@@ -3,53 +3,6 @@ import { ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function TimelinePage() {
-  const timelineEvents = [
-    {
-      date: "October 2024",
-      events: [
-        "Launched a new AI-powered chatbot for customer service",
-        "Attended TechCon 2024 in San Francisco",
-        "Presented research on AI ethics at local university",
-        "Contributed to open-source NLP library",
-      ],
-    },
-    {
-      date: "September 2024",
-      events: [
-        "Completed advanced course in GraphQL",
-        "Started mentoring junior developers in the team",
-      ],
-    },
-    {
-      date: "August 2024",
-      events: [
-        "Led the migration of our main project to Next.js 14",
-        "Implemented new accessibility features across all company websites",
-      ],
-    },
-    {
-      date: "July 2024",
-      events: [
-        "Presented at the annual company tech showcase",
-        "Contributed to open-source project React Router",
-      ],
-    },
-    {
-      date: "June 2024",
-      events: [
-        "Completed AWS Solutions Architect certification",
-        "Launched v2.0 of Task Manager Pro with enhanced features",
-      ],
-    },
-    {
-      date: "May 2024",
-      events: [
-        "Implemented CI/CD pipeline using GitHub Actions",
-        "Started working on a new e-commerce platform for artisans",
-      ],
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-4xl mx-auto px-4 py-8 md:py-16">
@@ -65,18 +18,59 @@ export default function TimelinePage() {
 
         <main>
           <section className="space-y-8">
-            {timelineEvents.map((event, index) => (
-              <div key={index} className="border-l-2 border-primary pl-4 pb-1">
-                <h2 className="text-xl font-semibold mb-2">{event.date}</h2>
-                <ul className="list-disc list-inside space-y-2">
-                  {event.events.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-muted-foreground">
-                      {item}
+            <div className="border-l-2 border-primary pl-4 pb-1">
+              <h2 className="text-xl font-semibold mb-2">September 2024</h2>
+              <ul className="list-disc list-inside space-y-2">
+                <li className="text-muted-foreground">
+                  Took part in the <Link href="https://www.linkedin.com/posts/skander-karoui_happy-to-share-that-ive-recently-took-part-activity-7247153360540192769-t4BV?utm_source=share&utm_medium=member_desktop" className="text-grey-500 italic hover:underline">IPOC Challenge</Link> where I got to represent my school.
+                </li>
+              </ul>
+            </div>
+
+            <div className="border-l-2 border-primary pl-4 pb-1">
+              <h2 className="text-xl font-semibold mb-2">August 2024</h2>
+              <ul className="list-disc list-inside space-y-2">
+                <li className="text-muted-foreground">
+                  Worked on a <Link href="https://github.com/skanderkaroui/pantryapp" className="text-grey-500 italic hover:underline">Pantry Tracking</Link> app as part of Headstarter AI Fellowship
+                </li>
+              </ul>
+            </div>
+
+            <div className="border-l-2 border-primary pl-4 pb-1">
+              <h2 className="text-xl font-semibold mb-2">July 2024</h2>
+              <ul className="list-disc list-inside space-y-2">
+                <li className="text-muted-foreground">
+                  Led the migration of our main project to Next.js 14.
+                </li>
+                <li className="text-muted-foreground">
+                  Implemented new accessibility features across all company websites.
+                </li>
+              </ul>
+            </div>
+
+
+            <div className="border-l-2 border-primary pl-4 pb-1">
+              <h2 className="text-xl font-semibold mb-2">June 2024</h2>
+              <ul className="list-disc list-inside space-y-2">
+                <li className="text-muted-foreground">
+                  Received 3 AI Certifications from Nvidia:
+                  <ul className="list-disc list-inside space-y-1 mt-1 pl-5">
+                    <li>
+                      <Link href="https://learn.nvidia.com/certificates?id=Pj1043ItSWKnf_--S-LMPQ" className="text-grey-500 italic hover:underline">Fundamentals of Deep Learning</Link>
                     </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+                    <li>
+                      <Link href="https://learn.nvidia.com/certificates?id=ecpfbX4ETgeQhNl1n0PuyA" className="text-grey-500 italic hover:underline">Applications of AI for Predictive Maintenance</Link>
+                    </li>
+                    <li>
+                      <Link href="https://learn.nvidia.com/certificates?id=7LNTaxf0QKGtbsnGZ_-vEQ" className="text-grey-500 italic hover:underline">Building Transformer-Based Natural Language Processing Applications</Link>
+                    </li>
+                  </ul>
+                </li>
+                <li className="text-muted-foreground">
+                  Participated in Climate Change AI Summer 2024
+                </li>
+              </ul>
+            </div>
           </section>
         </main>
       </div>
