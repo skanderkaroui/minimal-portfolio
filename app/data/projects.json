@@ -2,14 +2,14 @@
     {
       "id": 1,
       "title": "Movie Recommendation System",
-      "description": "",
+      "description":"",
       "content": "Recommendation system that explores content-based, user-based, collaborative filtering and item-based collaborative filtering",
       "link": "https://github.com/skanderkaroui/collaborative_filtering_movie_recommendation"
     },
     {
       "id": 2,
-      "title": "Artisan Market",
-      "description": "E-commerce platform for artisans",
+      "title": "AI Voice Assistant",
+      "description": "AI Voice Assistant ",
       "content": "An e-commerce platform connecting artisans with customers, powered by Next.js and Stripe.",
       "link": "#"
     }
