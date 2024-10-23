@@ -63,7 +63,7 @@ export function PortfolioComponent() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="max-w-4xl mx-auto px-4 py-24 md:py-20">
+      <div className="max-w-3xl mx-auto px-4 my-4">
         <header className="mb-16 text-center relative">
           <Button
             variant="ghost"
@@ -82,11 +82,12 @@ export function PortfolioComponent() {
             height={300}
             style={{
               objectFit: "cover",
+              marginTop:"100px",
               marginLeft: "auto",
               marginRight: "auto",
-              marginBottom:"30px"
+              marginBottom: "30px",
             }}
-            className="rounded-md"
+            className="rounded-md mt-24 mb-8 mx-auto"
           />
           <h1 className="text-3xl md:text-4xl font-bold mb-2">
             Skander Karoui
@@ -145,13 +146,15 @@ export function PortfolioComponent() {
         <main className="space-y-16">
           <section id="about">
             {/* <h2 className="text-2xl font-semibold mb-4">About Me</h2> */}
-            <p className="text-primary">
-              I am a final-year engineering student from Tunisia pursuing a
-              degree in ICT engineering. I am highly involved in my local
-              community and have a strong passion for advancing AI and Data
-              Science, with a particular interest in software engineering and
-              AI.
-            </p>
+            <div className="text-center">
+              <p className="text-primary">
+                I am a final-year engineering student from Tunisia pursuing a
+                degree in ICT engineering. I am highly involved in my local
+                community and have a strong passion for advancing AI and Data
+                Science, with a particular interest in software engineering and
+                AI.
+              </p>
+            </div>
           </section>
 
           <section id="projects">
