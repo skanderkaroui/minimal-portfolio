@@ -1,42 +1,65 @@
-'use client'
+"use client";
 
-import { Github, Linkedin, Mail, ArrowRight, ChevronLeft, ChevronRight, Moon, Sun } from "lucide-react"
-import Link from "next/link"
-import { useState, useEffect, useCallback } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
-import { useTheme } from "next-themes"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Moon,
+  Sun,
+} from "lucide-react";
+import Link from "next/link";
+import { useState, useEffect, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
-import projectsData from '@/app/data/projects.json'
-import RecommendationImg from '@/app/data/images/recommendation.jpg'
-import DefaultImg from '@/app/data/images/cat.jpeg'
+import projectsData from "@/app/data/projects.json";
+import RecommendationImg from "@/app/data/images/recommendation.jpg";
+import DefaultImg from "@/app/data/images/cat.jpeg";
+import SkanderImg from "@/app/data/images/ghana_photo_hozirontal.jpg";
 
 const projectImages = {
   "1": RecommendationImg,
 };
 
 export function PortfolioComponent() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
-  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
-  const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
+  const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
+  const { theme, setTheme } = useTheme();
 
-  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi])
-  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi])
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi]
+  );
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi]
+  );
 
   const onSelect = useCallback(() => {
-    if (!emblaApi) return
-    setPrevBtnEnabled(emblaApi.canScrollPrev())
-    setNextBtnEnabled(emblaApi.canScrollNext())
-  }, [emblaApi])
+    if (!emblaApi) return;
+    setPrevBtnEnabled(emblaApi.canScrollPrev());
+    setNextBtnEnabled(emblaApi.canScrollNext());
+  }, [emblaApi]);
 
   useEffect(() => {
-    if (!emblaApi) return
-    onSelect()
-    emblaApi.on('select', onSelect)
-  }, [emblaApi, onSelect])
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+  }, [emblaApi, onSelect]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -46,25 +69,48 @@ export function PortfolioComponent() {
             variant="ghost"
             size="icon"
             className="absolute right-0 top-0"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">Toggle theme</span>
           </Button>
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">Skander Karoui</h1>
+          <Image
+            src={SkanderImg}
+            alt={"Skander's Image"}
+            width={400}
+            height={300}
+            style={{
+              objectFit: "cover",
+              marginLeft: "auto",
+              marginRight: "auto",
+              marginBottom:"30px"
+            }}
+            className="rounded-md"
+          />
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">
+            Skander Karoui
+          </h1>
           <p className="text-lg md:text-xl text-muted-foreground">
             Telecommunication Engineering Student
           </p>
           <p className="text-lg md:text-xl text-muted-foreground mb-4">
-            passionate about <span className="font-bold text-primary">AI</span> & <span className="font-bold text-primary">Software Engineering</span>
+            passionate about <span className="font-bold text-primary">AI</span>{" "}
+            &{" "}
+            <span className="font-bold text-primary">Software Engineering</span>
           </p>
           <nav className="flex flex-wrap justify-center space-x-4 mb-4">
-            <Link href="#about" className="hover:underline">About</Link>  
+            <Link href="#about" className="hover:underline">
+              About
+            </Link>
             {/*<Link href="#projects" className="hover:underline">Projects</Link>
             <Link href="#contact" className="hover:underline">Contact</Link> */}
-            <Link href="/timeline" className="hover:underline">Timeline</Link>
-            <Link href="/blog" className="hover:underline">Blog</Link>
+            <Link href="/timeline" className="hover:underline">
+              Timeline
+            </Link>
+            <Link href="/blog" className="hover:underline">
+              Blog
+            </Link>
           </nav>
           <div className="flex justify-center space-x-4">
             <Button variant="ghost" size="icon" asChild>
@@ -74,13 +120,21 @@ export function PortfolioComponent() {
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com/skanderkaroui" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://github.com/skanderkaroui"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://www.linkedin.com/in/skander-karoui" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://www.linkedin.com/in/skander-karoui"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
@@ -91,10 +145,12 @@ export function PortfolioComponent() {
         <main className="space-y-16">
           <section id="about">
             {/* <h2 className="text-2xl font-semibold mb-4">About Me</h2> */}
-            <p className="text-muted-foreground">
-            I am a final-year engineering student from Tunisia pursuing a degree in ICT engineering.
-            I am highly involved in my local community and have a strong passion for advancing AI and Data Science,
-            with a particular interest in software engineering and AI.
+            <p className="text-primary">
+              I am a final-year engineering student from Tunisia pursuing a
+              degree in ICT engineering. I am highly involved in my local
+              community and have a strong passion for advancing AI and Data
+              Science, with a particular interest in software engineering and
+              AI.
             </p>
           </section>
 
@@ -108,12 +164,18 @@ export function PortfolioComponent() {
                       <Card>
                         <CardHeader>
                           <CardTitle>{project.title}</CardTitle>
-                          <CardDescription>{project.description}</CardDescription>
+                          <CardDescription>
+                            {project.description}
+                          </CardDescription>
                         </CardHeader>
                         <CardContent>
                           <div className="relative w-full h-48 mb-4">
                             <Image
-                              src={projectImages[project.id.toString() as keyof typeof projectImages] || DefaultImg}
+                              src={
+                                projectImages[
+                                  project.id.toString() as keyof typeof projectImages
+                                ] || DefaultImg
+                              }
                               alt={project.title}
                               fill
                               style={{ objectFit: "cover" }}
@@ -127,7 +189,10 @@ export function PortfolioComponent() {
                           </p>
                         </CardContent>
                         <CardFooter>
-                          <Link href={project.link} className="text-primary hover:underline inline-flex items-center">
+                          <Link
+                            href={project.link}
+                            className="text-primary hover:underline inline-flex items-center"
+                          >
                             View Project <ArrowRight className="ml-2 h-4 w-4" />
                           </Link>
                         </CardFooter>
@@ -136,9 +201,9 @@ export function PortfolioComponent() {
                   ))}
                 </div>
               </div>
-              <Button 
-                variant="outline" 
-                size="icon" 
+              <Button
+                variant="outline"
+                size="icon"
                 className="absolute top-1/2 left-0 transform -translate-y-1/2"
                 onClick={scrollPrev}
                 disabled={!prevBtnEnabled}
@@ -146,9 +211,9 @@ export function PortfolioComponent() {
                 <ChevronLeft className="h-4 w-4" />
                 <span className="sr-only">Previous project</span>
               </Button>
-              <Button 
-                variant="outline" 
-                size="icon" 
+              <Button
+                variant="outline"
+                size="icon"
                 className="absolute top-1/2 right-0 transform -translate-y-1/2"
                 onClick={scrollNext}
                 disabled={!nextBtnEnabled}
@@ -162,7 +227,8 @@ export function PortfolioComponent() {
           <section id="contact">
             <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
             <p className="text-muted-foreground mb-4">
-              I&apos;m always open to new opportunities and collaborations. Feel free to reach out!
+              I&apos;m always open to new opportunities and collaborations. Feel
+              free to reach out!
             </p>
             <Button asChild>
               <Link href="mailto:skander.karoui@gmail.com">
@@ -177,5 +243,5 @@ export function PortfolioComponent() {
         </footer>
       </div>
     </div>
-  )
+  );
 }
