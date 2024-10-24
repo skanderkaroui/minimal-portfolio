@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import SkanderImg from "@/app/data/images/ghana_photo_hozirontal.jpg";
+import SkanderImg from "@/app/data/images/ghana_fun_photo.jpg";
 
 const LeetCodeStats = () => {
   const [solvedCount, setSolvedCount] = useState("around 150");
