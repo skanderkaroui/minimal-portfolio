@@ -7,6 +7,16 @@
     text-wrap: balance;
   }
 }
+.link {
+  color: #3b82f6; /* Tailwind's blue-500 */
+  transition: color 0.2s, box-shadow 0.2s;
+}
+
+.link:hover {
+  color: #37bcb9; /* Tailwind's blue-200 */
+  text-decoration: underline;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shine effect */
+}
 
 @layer base {
   :root {
