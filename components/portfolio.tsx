@@ -10,7 +10,7 @@ import {
   Facebook,
 } from "lucide-react";
 import Link from "next/link";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect} from "react";
 // import useEmblaCarousel from "embla-carousel-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
