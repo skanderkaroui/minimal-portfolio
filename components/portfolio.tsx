@@ -111,8 +111,6 @@ export function PortfolioComponent() {
             <Link href="#about" className="hover:underline">
               About
             </Link>
-            {/*<Link href="#projects" className="hover:underline">Projects</Link>
-            <Link href="#contact" className="hover:underline">Contact</Link> */}
             <Link href="/timeline" className="hover:underline">
               Timeline
             </Link>
@@ -152,7 +150,6 @@ export function PortfolioComponent() {
 
         <main className="space-y-16">
           <section id="about">
-            {/* <h2 className="text-2xl font-semibold mb-4">About Me</h2> */}
             <div className="text-center">
               <p className="text-primary">
                 I am a final-year engineering student from Tunisia pursuing a
