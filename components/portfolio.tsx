@@ -165,16 +165,7 @@ export function PortfolioComponent() {
               What I'm working on right now:
             </h2>
             <ul className="list-disc pl-5 space-y-1">
-              <li>an AI voice assistant</li>
-              <li>
-                <a
-                  href="https://www.skander.xyz"
-                  className="text-blue-500 transition-colors duration-400 ease-in-out hover:text-yellow-500 hover:underline"
-                >
-                  this
-                </a>{" "}
-                website
-              </li>
+              <li>an AI voice assistant called auto designed to help you make better decisions in meetings</li>
               <li>
                 Learning about data structure and algorithms and solving Leetcode problems, currently solved <LeetCodeStats />{" "}
                 problem
@@ -196,12 +187,14 @@ export function PortfolioComponent() {
                 , where we worked on events and digital content
               </li>
               <li>Took part in the OST competition during which I worked with <a href="http://www.instaware.tn/" className="link-blue">Instaware</a> as a Business Developer where we attended than +100 Hours of entrepreneurship and startup training and won second prize in the competition</li>
-              <li>Worked on 5+ AI, Software projects <a
+              <li>Built more +5 AI, Software projects <a
                   href="/timeline"
                   className="text-blue-500 transition-colors duration-400 ease-in-out hover:text-yellow-500 hover:underline"
                 >
                   (more here)
                 </a></li>
+                <li>Completed 90 hours of Data Science Training and received Data Scientist with Python</li>
+                <li>Worked on <a href="https://archiveprepa.tn" className="text-grey-500 italic hover:underline">archiveprepa.tn</a> a website for preparatory students generating 200k views per year</li>
             </ul>
           </section>
 
