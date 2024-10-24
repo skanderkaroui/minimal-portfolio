@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Poppins, Arial, Helvetica, sans-serif !important;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -68,10 +64,6 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
-
-
-
-
 
 @layer base {
   * {
