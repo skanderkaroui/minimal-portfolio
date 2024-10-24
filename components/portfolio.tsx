@@ -34,12 +34,24 @@ const LeetCodeStats = () => {
           "https://leetcodeapi-v1.vercel.app/skirrrrrra"
         );
         const data = await response.json();
-        const totalSolved =
-          data.skirrrrrra.submitStatsGlobal.acSubmissionNum.find(
-            (item: { difficulty: string; count: number }) =>
-              item.difficulty === "All"
-          ).count;
-        setSolvedCount(totalSolved);
+        // Define the type for the response data
+        type SubmissionStats = {
+          difficulty: string;
+          count: number;
+        };
+
+        type LeetCodeData = {
+          skirrrrrra: {
+            submitStatsGlobal: {
+              acSubmissionNum: SubmissionStats[];
+            };
+          };
+        };
+
+        const totalSolved = (data as LeetCodeData).skirrrrrra.submitStatsGlobal.acSubmissionNum.find(
+          (item: SubmissionStats) => item.difficulty === "All"
+        )?.count || 0; // Use optional chaining and default to 0 if not found
+        setSolvedCount(totalSolved.toString()); // Convert number to string
       } catch (error) {
         console.error("Failed to fetch LeetCode stats:", error);
       }
