@@ -222,7 +222,7 @@ export function PortfolioComponent() {
                 Worked on{" "}
                 <a
                   href="https://archiveprepa.tn"
-                  className="text-grey-500 italic hover:underline"
+                  className="link-blue"
                 >
                   archiveprepa.tn
                 </a>{" "}
