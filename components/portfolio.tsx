@@ -10,20 +10,12 @@ import {
   Facebook,
 } from "lucide-react";
 import Link from "next/link";
-import { useState, useEffect} from "react";
-// import useEmblaCarousel from "embla-carousel-react";
+import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import SkanderImg from "@/app/data/images/ghana_photo_hozirontal.jpg";
 
-// import projectsData from "@/app/data/projects.json";
-// import RecommendationImg from "@/app/data/images/recommendation.jpg";
-// import DefaultImg from "@/app/data/images/cat.jpeg";
-
-// const projectImages = {
-//   "1": RecommendationImg,
-// };
 const LeetCodeStats = () => {
   const [solvedCount, setSolvedCount] = useState("around 150");
 
@@ -48,9 +40,12 @@ const LeetCodeStats = () => {
           };
         };
 
-        const totalSolved = (data as LeetCodeData).skirrrrrra.submitStatsGlobal.acSubmissionNum.find(
-          (item: SubmissionStats) => item.difficulty === "All"
-        )?.count || 0; // Use optional chaining and default to 0 if not found
+        const totalSolved =
+          (
+            data as LeetCodeData
+          ).skirrrrrra.submitStatsGlobal.acSubmissionNum.find(
+            (item: SubmissionStats) => item.difficulty === "All"
+          )?.count || 0; // Use optional chaining and default to 0 if not found
         setSolvedCount(totalSolved.toString()); // Convert number to string
       } catch (error) {
         console.error("Failed to fetch LeetCode stats:", error);
@@ -64,31 +59,7 @@ const LeetCodeStats = () => {
 };
 
 export function PortfolioComponent() {
-  // const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  // const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
-  // const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
   const { theme, setTheme } = useTheme();
-
-  // const scrollPrev = useCallback(
-  //   () => emblaApi && emblaApi.scrollPrev(),
-  //   [emblaApi]
-  // );
-  // const scrollNext = useCallback(
-  //   () => emblaApi && emblaApi.scrollNext(),
-  //   [emblaApi]
-  // );
-
-  // const onSelect = useCallback(() => {
-  //   if (!emblaApi) return;
-  //   setPrevBtnEnabled(emblaApi.canScrollPrev());
-  //   setNextBtnEnabled(emblaApi.canScrollNext());
-  // }, [emblaApi]);
-
-  // useEffect(() => {
-  //   if (!emblaApi) return;
-  //   onSelect();
-  //   emblaApi.on("select", onSelect);
-  // }, [emblaApi, onSelect]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
