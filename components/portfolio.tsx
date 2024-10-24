@@ -171,7 +171,11 @@ export function PortfolioComponent() {
               </li>
               <li>
                 Learning about data structure and algorithms and solving
-                Leetcode problems, currently solved <a href="https://github.com/skanderkaroui" className="link-blue"> <LeetCodeStats /> problem </a>
+                Leetcode problems, currently solved{" "}
+                <a href="https://leetcode.com/skirrrrrra" className="link-blue">
+                  {" "}
+                  <LeetCodeStats /> problem{" "}
+                </a>
               </li>{" "}
             </ul>
           </section>
@@ -211,7 +215,8 @@ export function PortfolioComponent() {
               </li>
               <li>
                 Completed 90 hours of Data Science training and received a
-                certification in Data Science with Python certification from Datacamp.
+                certification in Data Science with Python certification from
+                Datacamp.
               </li>
               <li>
                 Worked on{" "}
@@ -220,9 +225,9 @@ export function PortfolioComponent() {
                   className="text-grey-500 italic hover:underline"
                 >
                   archiveprepa.tn
-                </a>
-                , a website for preparatory students generating 200k views per
-                year.
+                </a>{" "}
+                alongside my friend Insaf, a website for preparatory students
+                generating 200k views per year.
               </li>
             </ul>
           </section>

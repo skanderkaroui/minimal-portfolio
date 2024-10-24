@@ -154,23 +154,25 @@ export default function TimelinePage() {
             </div>
 
             <div className="border-l-2 border-primary pl-4 pb-1">
-              <h2 className="text-xl font-semibold mb-2">
-                2023-2024
-              </h2>
+              <h2 className="text-xl font-semibold mb-2">2023-2024</h2>
               <ul className="list-disc list-inside space-y-2">
                 <li className="text-primary">
                   Participated in IndabaX 2024 by developing a Dental Image
                   Object Detection model utilizing Torchvision and ResNet
                   architecture.
                 </li>
-                <li>Worked on a Movie Recommendation System alongside my friend Oussama where we explored User-Based, Item-Based and Content-Based Collaboration [
+                <li>
+                  Worked on a Movie Recommendation System alongside my friend
+                  Oussama where we explored User-Based, Item-Based and
+                  Content-Based Collaboration [
                   <Link
                     href="https://github.com/skanderkaroui/collaborative_filtering_movie_recommendation"
                     className="link-blue"
                   >
                     Code
                   </Link>
-                  ].</li>
+                  ].
+                </li>
                 <li className="text-primary">
                   I was selected as a Team Leader for{" "}
                   <a
@@ -197,6 +199,17 @@ export default function TimelinePage() {
                   Interned at elyadata as a Software Data engineer where I
                   developed an arabic document generation system for layout
                   parsing using Docker and FastAPI.
+                </li>
+                <li>
+                  Worked on{" "}
+                  <a
+                    href="https://archiveprepa.tn"
+                    className="text-grey-500 italic hover:underline"
+                  >
+                    archiveprepa.tn
+                  </a>{" "}
+                  alongside my friend Insaf, a website for preparatory students
+                  generating 200k views per year.
                 </li>
               </ul>
             </div>
