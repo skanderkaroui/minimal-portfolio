@@ -63,8 +63,8 @@ export function PortfolioComponent() {
 
   useEffect(() => {
     // Set the default theme to 'dark'
-    if (theme === 'system') {
-      setTheme('dark');
+    if (theme === "system") {
+      setTheme("dark");
     }
   }, [theme, setTheme]);
 
@@ -153,9 +153,9 @@ export function PortfolioComponent() {
             <div className="text-center">
               <p className="text-primary">
                 I am a final-year engineering student from Tunisia pursuing a
-                degree in Telecommunication engineering. I am primarly interested
-                in AI and entrepreneurship and would love to contribute to any
-                project that sparks my interest.
+                degree in Telecommunication engineering. I am primarly
+                interested in AI and entrepreneurship and would love to
+                contribute to any project that sparks my interest.
               </p>
             </div>
           </section>
@@ -165,16 +165,21 @@ export function PortfolioComponent() {
               What I'm working on right now:
             </h2>
             <ul className="list-disc pl-5 space-y-1">
-              <li>an AI voice assistant called auto designed to help you make better decisions in meetings</li>
               <li>
-                Learning about data structure and algorithms and solving Leetcode problems, currently solved <LeetCodeStats />{" "}
-                problem
+                an AI voice assistant called auto designed to help you make
+                better decisions in meetings
+              </li>
+              <li>
+                Learning about data structure and algorithms and solving
+                Leetcode problems, currently solved <LeetCodeStats /> problem
               </li>{" "}
             </ul>
           </section>
 
           <section id="past-work">
-            <h2 className="text-2xl font-semibold mb-6">What I've done so far:</h2>
+            <h2 className="text-2xl font-semibold mb-6">
+              What I've done so far:
+            </h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>
                 Served as a Team Leader for my university's{" "}
@@ -184,17 +189,41 @@ export function PortfolioComponent() {
                 >
                   radio club
                 </a>
-                , where we worked on events and digital content
+                , where we organized events and created digital content.
               </li>
-              <li>Took part in the OST competition during which I worked with <a href="http://www.instaware.tn/" className="link-blue">Instaware</a> as a Business Developer where we attended than +100 Hours of entrepreneurship and startup training and won second prize in the competition</li>
-              <li>Built more +5 AI, Software projects <a
+              <li>
+                Took part in the OST competition, during which I worked with{" "}
+                <a href="http://www.instaware.tn/" className="link-blue">
+                  Instaware
+                </a>{" "}
+                as a Business Developer. We attended over 100 hours of
+                entrepreneurship and startup training, and we won second prize
+                in the competition.
+              </li>
+              <li>
+                Built more than 5 AI and software projects{" "}
+                <a
                   href="/timeline"
                   className="text-blue-500 transition-colors duration-400 ease-in-out hover:text-yellow-500 hover:underline"
                 >
                   (more here)
-                </a></li>
-                <li>Completed 90 hours of Data Science Training and received Data Scientist with Python</li>
-                <li>Worked on <a href="https://archiveprepa.tn" className="text-grey-500 italic hover:underline">archiveprepa.tn</a> a website for preparatory students generating 200k views per year</li>
+                </a>
+              </li>
+              <li>
+                Completed 90 hours of Data Science training and received a
+                certification in Data Science with Python certification.
+              </li>
+              <li>
+                Worked on{" "}
+                <a
+                  href="https://archiveprepa.tn"
+                  className="text-grey-500 italic hover:underline"
+                >
+                  archiveprepa.tn
+                </a>
+                , a website for preparatory students generating 200k views per
+                year.
+              </li>
             </ul>
           </section>
 
@@ -212,7 +241,8 @@ export function PortfolioComponent() {
               </Button>
             </div>
             <p className="text-primary foreground mb-4">
-              If you're interested in checking out my other socials, you can find them here:
+              If you're interested in checking out my other socials, you can
+              find them here:
             </p>
             <div className="flex justify-center space-x-4 px-4 my-4">
               <Button variant="ghost" size="icon" asChild>
