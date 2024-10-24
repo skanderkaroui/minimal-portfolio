@@ -153,9 +153,9 @@ export function PortfolioComponent() {
             <div className="text-center">
               <p className="text-primary">
                 I am a final-year engineering student from Tunisia pursuing a
-                degree in Telecommunication engineering. I am mostly interested
+                degree in Telecommunication engineering. I am primarly interested
                 in AI and entrepreneurship and would love to contribute to any
-                project that can spark my interest.
+                project that sparks my interest.
               </p>
             </div>
           </section>
@@ -176,7 +176,7 @@ export function PortfolioComponent() {
                 website
               </li>
               <li>
-                solving Leetcode problems, currently solved <LeetCodeStats />{" "}
+                Learning about data structure and algorithms and solving Leetcode problems, currently solved <LeetCodeStats />{" "}
                 problem
               </li>{" "}
             </ul>
@@ -197,7 +197,7 @@ export function PortfolioComponent() {
               </li>
               <li>Took part in the OST competition during which I worked with <a href="http://www.instaware.tn/" className="link-blue">Instaware</a> as a Business Developer where we attended than +100 Hours of entrepreneurship and startup training and won second prize in the competition</li>
               <li>Worked on 5+ AI, Software projects <a
-                  href="timeline"
+                  href="/timeline"
                   className="text-blue-500 transition-colors duration-400 ease-in-out hover:text-yellow-500 hover:underline"
                 >
                   (more here)
@@ -209,7 +209,7 @@ export function PortfolioComponent() {
             <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
             <p className="text-primaryforeground mb-4">
               I&apos;m always open to new opportunities and collaborations so
-              feel free to reach out to me via email here.
+              feel free to reach out to me.
             </p>
             <div className="flex justify-center space-x-4 px-4 my-4 mb-6">
               <Button asChild>
@@ -219,7 +219,7 @@ export function PortfolioComponent() {
               </Button>
             </div>
             <p className="text-primary foreground mb-4">
-              If you're interested in checking my other socials they're here
+              If you're interested in checking out my other socials, you can find them here:
             </p>
             <div className="flex justify-center space-x-4 px-4 my-4">
               <Button variant="ghost" size="icon" asChild>
