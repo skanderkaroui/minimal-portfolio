@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+// import useEmblaCarousel from "embla-carousel-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -64,31 +64,31 @@ const LeetCodeStats = () => {
 };
 
 export function PortfolioComponent() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
-  const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
+  // const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  // const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
+  // const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  const scrollPrev = useCallback(
-    () => emblaApi && emblaApi.scrollPrev(),
-    [emblaApi]
-  );
-  const scrollNext = useCallback(
-    () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi]
-  );
+  // const scrollPrev = useCallback(
+  //   () => emblaApi && emblaApi.scrollPrev(),
+  //   [emblaApi]
+  // );
+  // const scrollNext = useCallback(
+  //   () => emblaApi && emblaApi.scrollNext(),
+  //   [emblaApi]
+  // );
 
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setPrevBtnEnabled(emblaApi.canScrollPrev());
-    setNextBtnEnabled(emblaApi.canScrollNext());
-  }, [emblaApi]);
+  // const onSelect = useCallback(() => {
+  //   if (!emblaApi) return;
+  //   setPrevBtnEnabled(emblaApi.canScrollPrev());
+  //   setNextBtnEnabled(emblaApi.canScrollNext());
+  // }, [emblaApi]);
 
-  useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
-  }, [emblaApi, onSelect]);
+  // useEffect(() => {
+  //   if (!emblaApi) return;
+  //   onSelect();
+  //   emblaApi.on("select", onSelect);
+  // }, [emblaApi, onSelect]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
