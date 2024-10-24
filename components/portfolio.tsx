@@ -226,7 +226,7 @@ export function PortfolioComponent() {
                 >
                   archiveprepa.tn
                 </a>{" "}
-                alongside my friend Insaf, a website for preparatory students
+                alongside my friend <a href="https://www.linkedin.com/in/insaf-hamdi-806351251/" className="text-grey-500 italic hover:underline">Insaf</a>, a website for preparatory students
                 generating 200k views per year.
               </li>
             </ul>
