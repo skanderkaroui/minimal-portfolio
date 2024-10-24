@@ -171,7 +171,7 @@ export function PortfolioComponent() {
               </li>
               <li>
                 Learning about data structure and algorithms and solving
-                Leetcode problems, currently solved <LeetCodeStats /> problem
+                Leetcode problems, currently solved <a href="https://github.com/skanderkaroui" className="link-blue"> <LeetCodeStats /> problem </a>
               </li>{" "}
             </ul>
           </section>
@@ -253,16 +253,6 @@ export function PortfolioComponent() {
                 >
                   <Facebook className="h-5 w-5" />
                   <span className="sr-only">Facebook</span>
-                </Link>
-              </Button>
-              <Button variant="ghost" size="icon" asChild>
-                <Link
-                  href="https://www.linkedin.com/in/skander-karoui"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" asChild>
