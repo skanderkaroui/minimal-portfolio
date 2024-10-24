@@ -166,7 +166,7 @@ export function PortfolioComponent() {
             </h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                an AI voice assistant called auto designed to help you make
+                An AI voice assistant called auto designed to help you make
                 better decisions in meetings
               </li>
               <li>
