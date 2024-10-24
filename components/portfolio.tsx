@@ -4,9 +4,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  ArrowRight,
-  ChevronLeft,
-  ChevronRight,
   Moon,
   Sun,
   Instagram,
@@ -18,14 +15,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import SkanderImg from "@/app/data/images/ghana_photo_hozirontal.jpg";
 
 // import projectsData from "@/app/data/projects.json";
@@ -202,7 +191,8 @@ export function PortfolioComponent() {
                 website
               </li>
               <li>
-                solving Leetcode problems, currently solved <LeetCodeStats /> problem.
+                solving Leetcode problems, currently solved <LeetCodeStats />{" "}
+                problem.
               </li>{" "}
             </ul>
           </section>
