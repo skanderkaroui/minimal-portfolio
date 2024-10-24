@@ -221,7 +221,6 @@ export function PortfolioComponent() {
                 , where we worked on events and digital content
               </li>
               <li>Took part in the OST competition where I</li>
-              <li></li>
             </ul>
           </section>
 
