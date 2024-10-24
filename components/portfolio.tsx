@@ -168,7 +168,7 @@ export function PortfolioComponent() {
               What I'm working on right now:
             </h2>
             <ul className="list-disc pl-5 space-y-1">
-              <li>an AI voice assistant to join and help in meetings</li>
+              <li>an AI voice assistant</li>
               <li>
                 <a
                   href="https://www.skander.xyz"
@@ -180,13 +180,13 @@ export function PortfolioComponent() {
               </li>
               <li>
                 solving Leetcode problems, currently solved <LeetCodeStats />{" "}
-                problem.
+                problem
               </li>{" "}
             </ul>
           </section>
 
           <section id="past-work">
-            <h2 className="text-2xl font-semibold mb-6">What I've done:</h2>
+            <h2 className="text-2xl font-semibold mb-6">What I've done so far:</h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>
                 Served as a Team Leader for my university's{" "}
@@ -198,7 +198,13 @@ export function PortfolioComponent() {
                 </a>
                 , where we worked on events and digital content
               </li>
-              <li>Took part in the OST competition where I</li>
+              <li>Took part in the OST competition during which I worked with <a href="http://www.instaware.tn/" className="link-blue">Instaware</a> as a Business Developer where we attended than +100 Hours of entrepreneurship and startup training and won second prize in the competition</li>
+              <li>Worked on 5+ AI, Software projects <a
+                  href="timeline"
+                  className="text-blue-500 transition-colors duration-400 ease-in-out hover:text-yellow-500 hover:underline"
+                >
+                  (more here)
+                </a></li>
             </ul>
           </section>
 
@@ -241,12 +247,12 @@ export function PortfolioComponent() {
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <Link
-                  href="https://www.instagram.com/in/skander_karoui"
+                  href="https://www.instagram.com/skander_karoui"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Instagram className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
+                  <span className="sr-only">Instagram</span>
                 </Link>
               </Button>
             </div>
