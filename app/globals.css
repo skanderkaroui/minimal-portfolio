@@ -18,6 +18,17 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shine effect */
 }
 
+.link-blue {
+  color: #3b82f6; /* Tailwind's blue-500 */
+  transition: color 0.2s, box-shadow 0.2s;
+}
+
+.link-blue:hover {
+  color: #0073c0; /* Tailwind's blue-200 */
+  text-decoration: underline;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shine effect */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
