@@ -1,34 +1,38 @@
 [
-    {
-      "id": "1",
-      "titleUrl": "getting-started-with-nextjs-13",
-      "title": "Getting Started with Next.js 13",
-      "description": "Learn how to set up and use the latest features of Next.js 13 in your projects.",
-      "date": "October 15, 2024",
-      "readTime": "5 min read"
-    },
-    {
-      "id": "2",
-      "titleUrl": "power-of-server-components-in-react",
-      "title": "The Power of Server Components in React",
-      "description": "Explore how Server Components can improve your React application's performance and user experience.",
-      "date": "September 28, 2024",
-      "readTime": "7 min read"
-    },
-    {
-      "id": "3",
-      "titleUrl": "mastering-typescript-advanced-tips-and-tricks",
-      "title": "Mastering TypeScript: Advanced Tips and Tricks",
-      "description": "Dive deep into TypeScript with these advanced techniques to write more robust and maintainable code.",
-      "date": "September 10, 2024",
-      "readTime": "10 min read"
-    },
-    {
-      "id": "4",
-      "titleUrl": "building-accessible-web-applications",
-      "title": "Building Accessible Web Applications",
-      "description": "Learn best practices for creating web applications that are accessible to all users.",
-      "date": "August 22, 2024",
-      "readTime": "8 min read"
-    }
-  ]
+  {
+    "id": "1",
+    "titleUrl": "building-movie-recommendation-system",
+    "title": "Building a Movie Recommendation System: Exploring User-Based, Item-Based, and Content-Based Filtering",
+    "description": "Dive into the details of how a movie recommendation system is developed using different approaches and why they're used.",
+    "date": "October 24, 2024",
+    "readTime": "15 min read",
+    "done": "No"
+  },
+  {
+    "id": "2",
+    "titleUrl": "creating-ai-customer-assistant-nextjs-gemini-api",
+    "title": "Creating an AI-Powered Customer Assistant Using Next.js and Gemini API",
+    "description": "Learn how to develop an AI customer assistant leveraging Gemini API and using RAG.",
+    "date": "September 28, 2024",
+    "readTime": "20 min read",
+    "done": "No"
+  },
+  {
+    "id": "3",
+    "titleUrl": "developing-ai-voice-assistant",
+    "title": "Developing an AI Voice Assistant with Faster Whisper, OpenAI, and Google Text-to-Speech",
+    "description": "A breakdown of my project to create an AI voice assistant using popular APIs and models, highlighting the technical aspects of voice recognition and text-to-speech synthesis.",
+    "date": "August 30, 2024",
+    "readTime": "14 min read",
+    "done": "No"
+  },
+  {
+    "id": "4",
+    "titleUrl": "leading-orbeats-radio-club",
+    "title": "My Experience as Team Leader at University's Radio Club",
+    "description": "Reflections on my time as a team leader for my university’s radio club, focusing on event planning, digital content creation, and leadership skills developed.",
+    "date": "June 15, 2024",
+    "readTime": "10 min read",
+    "done": "No"
+  }
+]
