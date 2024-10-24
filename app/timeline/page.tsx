@@ -38,7 +38,7 @@ export default function TimelinePage() {
               <h2 className="text-xl font-semibold mb-2">August 2024</h2>
               <ul className="list-disc list-inside space-y-2">
                 <li className="text-primary">
-                  Developed an AI Flashcard App with Next.js and Firebase
+                  Developed an AI Flashcard App alongside my friend <a href="https://www.linkedin.com/in/anasmubashar/" className="text-grey-500 italic hover:underline">Anas</a> with Next.js and Firebase
                   (Headstarter AI program) [
                   <Link
                     href="https://github.com/skanderkaroui/AI-Flashcard-App"
@@ -49,7 +49,7 @@ export default function TimelinePage() {
                   ].
                 </li>
                 <li className="text-primary">
-                  Built an AI Customer Assistant using Next.js, Gemini API, and
+                  Built an AI Customer Assistant alongside my friend <a href="https://www.linkedin.com/in/anasmubashar/" className="text-grey-500 italic hover:underline">Anas</a> using Next.js, Gemini API, and
                   RAG (Headstarter AI program) [
                   <Link
                     href="https://github.com/skanderkaroui/customer-support-ai"
@@ -208,7 +208,7 @@ export default function TimelinePage() {
                   >
                     archiveprepa.tn
                   </a>{" "}
-                  alongside my friend Insaf, a website for preparatory students
+                  alongside my friend <a href="https://www.linkedin.com/in/insaf-hamdi-806351251/" className="text-grey-500 italic hover:underline"></a>Insaf, a website for preparatory students
                   generating 200k views per year.
                 </li>
               </ul>
