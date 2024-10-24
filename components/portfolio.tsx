@@ -162,7 +162,7 @@ export function PortfolioComponent() {
 
           <section id="projects">
             <h2 className="text-2xl font-semibold mb-6">
-              What I'm working on right now:
+              What I'm working on right now
             </h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>
@@ -182,7 +182,7 @@ export function PortfolioComponent() {
 
           <section id="past-work">
             <h2 className="text-2xl font-semibold mb-6">
-              What I've done so far:
+              What I've done so far
             </h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>
@@ -193,8 +193,10 @@ export function PortfolioComponent() {
                 >
                   radio club
                 </a>
-                , where we organized events and created digital content.
+                , which was composed of 50 members, where we organized events
+                and created digital content.
               </li>
+
               <li>
                 Took part in the OST competition, during which I worked with{" "}
                 <a href="http://www.instaware.tn/" className="link-blue">
@@ -220,14 +222,18 @@ export function PortfolioComponent() {
               </li>
               <li>
                 Worked on{" "}
-                <a
-                  href="https://archiveprepa.tn"
-                  className="link-blue"
-                >
+                <a href="https://archiveprepa.tn" className="link-blue">
                   archiveprepa.tn
                 </a>{" "}
-                alongside my friend <a href="https://www.linkedin.com/in/insaf-hamdi-806351251/" className="text-grey-500 italic hover:underline">Insaf</a>, a website for preparatory students
-                generating 200k views per year.
+                alongside my friend{" "}
+                <a
+                  href="https://www.linkedin.com/in/insaf-hamdi-806351251/"
+                  className="text-grey-500 italic hover:underline"
+                >
+                  Insaf
+                </a>
+                , a website for preparatory students generating 200k views per
+                year.
               </li>
             </ul>
           </section>
