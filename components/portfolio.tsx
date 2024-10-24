@@ -61,6 +61,13 @@ const LeetCodeStats = () => {
 export function PortfolioComponent() {
   const { theme, setTheme } = useTheme();
 
+  useEffect(() => {
+    // Set the default theme to 'dark'
+    if (theme === 'system') {
+      setTheme('dark');
+    }
+  }, [theme, setTheme]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-3xl mx-auto px-4 my-4">
