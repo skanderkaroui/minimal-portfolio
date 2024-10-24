@@ -211,7 +211,7 @@ export function PortfolioComponent() {
               </li>
               <li>
                 Completed 90 hours of Data Science training and received a
-                certification in Data Science with Python certification.
+                certification in Data Science with Python certification from Datacamp.
               </li>
               <li>
                 Worked on{" "}
