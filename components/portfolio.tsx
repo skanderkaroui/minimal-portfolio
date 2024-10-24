@@ -161,8 +161,6 @@ export function PortfolioComponent() {
               What I'm working on right now:
             </h2>
             <ul className="list-disc pl-5 space-y-1">
-              {" "}
-              {/* Added space-y-2 for vertical spacing between items */}
               <li>an AI voice assistant to join and help in meetings</li>
               <li>
                 <a
