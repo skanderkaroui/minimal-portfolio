@@ -29,7 +29,7 @@ export default function TimelinePage() {
                   >
                     2024 IPOC Challenge
                   </Link>{" "}
-                  where I got to represent my school in Ghana.
+                  where I represented my school in Ghana.
                 </li>
               </ul>
             </div>
@@ -38,8 +38,14 @@ export default function TimelinePage() {
               <h2 className="text-xl font-semibold mb-2">August 2024</h2>
               <ul className="list-disc list-inside space-y-2">
                 <li className="text-primary">
-                  Developed an AI Flashcard App alongside my friend <a href="https://www.linkedin.com/in/anasmubashar/" className="text-grey-500 italic hover:underline">Anas</a> with Next.js and Firebase
-                  (Headstarter AI program) [
+                  Developed an AI Flashcard App alongside my friend{" "}
+                  <a
+                    href="https://www.linkedin.com/in/anasmubashar/"
+                    className="text-grey-500 italic hover:underline"
+                  >
+                    Anas
+                  </a>{" "}
+                  using Next.js and Firebase (Headstarter AI program) [
                   <Link
                     href="https://github.com/skanderkaroui/AI-Flashcard-App"
                     className="link-blue"
@@ -49,8 +55,14 @@ export default function TimelinePage() {
                   ].
                 </li>
                 <li className="text-primary">
-                  Built an AI Customer Assistant alongside my friend <a href="https://www.linkedin.com/in/anasmubashar/" className="text-grey-500 italic hover:underline">Anas</a> using Next.js, Gemini API, and
-                  RAG (Headstarter AI program) [
+                  Built an AI Customer Assistant alongside my friend{" "}
+                  <a
+                    href="https://www.linkedin.com/in/anasmubashar/"
+                    className="text-grey-500 italic hover:underline"
+                  >
+                    Anas
+                  </a>{" "}
+                  using Next.js, Gemini API, and RAG (Headstarter AI program) [
                   <Link
                     href="https://github.com/skanderkaroui/customer-support-ai"
                     className="link-blue"
@@ -67,7 +79,7 @@ export default function TimelinePage() {
               <ul className="list-disc list-inside space-y-2">
                 <li className="text-primary">
                   Worked on a Pantry App Tracker using Next.js and Firebase as
-                  part of Headstarter AI program [
+                  part of the Headstarter AI program [
                   <Link
                     href="https://pantryapp-pi.vercel.app/"
                     className="link-blue"
@@ -90,8 +102,8 @@ export default function TimelinePage() {
               <h2 className="text-xl font-semibold mb-2">June 2024</h2>
               <ul className="list-disc list-inside space-y-2">
                 <li className="text-primary">
-                  Started working on auto an AI voice assistant built using
-                  Faster Whisper, OpenAI and Google Text to Speech [
+                  Started working on "auto," an AI voice assistant built using
+                  Faster Whisper, OpenAI, and Google Text-to-Speech [
                   <Link
                     href="https://github.com/skanderkaroui/auto"
                     className="link-blue"
@@ -140,8 +152,8 @@ export default function TimelinePage() {
                   </ul>
                 </li>
                 <li className="text-primary">
-                  Participated in BirdCLEF Kaggle competition where I worked on
-                  a Bird Species Identification using EffecientNetV2 [
+                  Participated in the BirdCLEF Kaggle competition where I worked on
+                  bird species identification using EfficientNetV2 [
                   <a
                     href="https://www.kaggle.com/code/skanderkaroui/birdclef24-skander-s-attempt-train/notebook"
                     className="link-blue"
@@ -157,14 +169,20 @@ export default function TimelinePage() {
               <h2 className="text-xl font-semibold mb-2">2023-2024</h2>
               <ul className="list-disc list-inside space-y-2">
                 <li className="text-primary">
-                  Participated in IndabaX 2024 by developing a Dental Image
-                  Object Detection model utilizing Torchvision and ResNet
+                  Participated in IndabaX 2024 by developing a dental image
+                  object detection model utilizing Torchvision and ResNet
                   architecture.
                 </li>
                 <li>
-                  Worked on a Movie Recommendation System alongside my friend
-                  Oussama where we explored User-Based, Item-Based and
-                  Content-Based Collaboration [
+                  Worked on a movie recommendation system alongside my friend
+                  {" "}
+                  <a
+                    href="https://www.linkedin.com/in/oussama-boubaker-18aa15241/"
+                    className="text-grey-500 italic hover:underline"
+                  >
+                    Oussama
+                  </a>{" "}, exploring user-based, item-based, and
+                  content-based collaboration [
                   <Link
                     href="https://github.com/skanderkaroui/collaborative_filtering_movie_recommendation"
                     className="link-blue"
@@ -179,14 +197,14 @@ export default function TimelinePage() {
                     className="link"
                     href="https://www.facebook.com/RadioEnetcom/"
                   >
-                    Orbeats Radio Club ENET'Com{" "}
-                  </a>
+                    Orbeats Radio Club ENET'Com
+                  </a>{" "}
                   where I served from June 2023 to June 2024.
                 </li>
                 <li className="text-primary">
-                  Completed Omdena Kenya Chapter project on shoplifting
-                  detection deployed using Streamlit app using yolov8 and
-                  PytorchVideo Library [
+                  Completed the Omdena Kenya Chapter project on shoplifting
+                  detection, deployed using a Streamlit app, and built using YOLOv8 and
+                  the PyTorchVideo library [
                   <Link
                     href="https://github.com/skanderkaroui/omdena_shoplifting_detection"
                     className="link-blue"
@@ -196,9 +214,9 @@ export default function TimelinePage() {
                   ].
                 </li>
                 <li className="text-primary">
-                  Interned at elyadata as a Software Data engineer where I
-                  developed an arabic document generation system for layout
-                  parsing using Docker and FastAPI.
+                  Interned at Elyadata as a Software Data Engineer, where I
+                  developed an Arabic document generation system for layout
+                  parsing using FastAPI and deployed it with Docker.
                 </li>
                 <li>
                   Worked on{" "}
@@ -208,8 +226,14 @@ export default function TimelinePage() {
                   >
                     archiveprepa.tn
                   </a>{" "}
-                  alongside my friend <a href="https://www.linkedin.com/in/insaf-hamdi-806351251/" className="text-grey-500 italic hover:underline"></a>Insaf, a website for preparatory students
-                  generating 200k views per year.
+                  alongside my friend{" "}
+                  <a
+                    href="https://www.linkedin.com/in/insaf-hamdi-806351251/"
+                    className="text-grey-500 italic hover:underline"
+                  >
+                    Insaf
+                  </a>
+                  , a website for preparatory students generating 200k views per year.
                 </li>
               </ul>
             </div>
