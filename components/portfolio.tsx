@@ -26,6 +26,7 @@ const LeetCodeStats = () => {
           "https://leetcodeapi-v1.vercel.app/skirrrrrra"
         );
         const data = await response.json();
+
         // Define the type for the response data
         type SubmissionStats = {
           difficulty: string;
@@ -103,7 +104,7 @@ export function PortfolioComponent() {
             Telecommunication Engineering Student
           </p>
           <p className="text-lg md:text-xl text-muted-foreground mb-4">
-            passionate about <span className="font-bold text-primary">AI</span>{" "}
+            Passionate about <span className="font-bold text-primary">AI</span>{" "}
             &{" "}
             <span className="font-bold text-primary">Software Engineering</span>
           </p>
@@ -153,8 +154,8 @@ export function PortfolioComponent() {
             <div className="text-center">
               <p className="text-primary">
                 I am a final-year engineering student from Tunisia pursuing a
-                degree in Telecommunication engineering. I am primarly
-                interested in AI and entrepreneurship and would love to
+                degree in Telecommunication Engineering. I am primarily
+                interested in AI and entrepreneurship, and I would love to
                 contribute to any project that sparks my interest.
               </p>
             </div>
@@ -166,17 +167,16 @@ export function PortfolioComponent() {
             </h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                An AI voice assistant called auto designed to help you make
-                better decisions in meetings
+                An AI voice assistant called "auto" designed to help make better
+                decisions in meetings.
               </li>
               <li>
-                Learning about data structure and algorithms and solving
-                Leetcode problems, currently solved{" "}
+                Learning about data structures and algorithms while solving
+                LeetCode problems. Currently solved{" "}
                 <a href="https://leetcode.com/skirrrrrra" className="link-blue">
-                  {" "}
-                  <LeetCodeStats /> problem{" "}
-                </a>
-              </li>{" "}
+                  <LeetCodeStats /> problems
+                </a>.
+              </li>
             </ul>
           </section>
 
@@ -192,19 +192,18 @@ export function PortfolioComponent() {
                   href="https://www.facebook.com/RadioEnetcom/"
                 >
                   radio club
-                </a>
-                , which was composed of 50 members, where we organized events
+                </a>{" "}
+                last year, which was composed of 50 members. We organized events
                 and created digital content.
               </li>
-
               <li>
                 Took part in the OST competition, during which I worked with{" "}
                 <a href="http://www.instaware.tn/" className="link-blue">
                   Instaware
                 </a>{" "}
                 as a Business Developer. We attended over 100 hours of
-                entrepreneurship and startup training, and we won second prize
-                in the competition.
+                entrepreneurship and startup training and won second prize in
+                the competition.
               </li>
               <li>
                 Built more than 5 AI and software projects{" "}
@@ -213,12 +212,11 @@ export function PortfolioComponent() {
                   className="text-blue-500 transition-colors duration-400 ease-in-out hover:text-yellow-500 hover:underline"
                 >
                   (more here)
-                </a>
+                </a>.
               </li>
               <li>
                 Completed 90 hours of Data Science training and received a
-                certification in Data Science with Python certification from
-                Datacamp.
+                "Data Science with Python" certification from Datacamp.
               </li>
               <li>
                 Worked on{" "}
@@ -241,17 +239,17 @@ export function PortfolioComponent() {
           <section id="contact">
             <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
             <p className="text-primaryforeground mb-4">
-              I&apos;m always open to new opportunities and collaborations so
+              I&apos;m always open to new opportunities and collaborations, so
               feel free to reach out to me.
             </p>
             <div className="flex justify-center space-x-4 px-4 my-4 mb-6">
               <Button asChild>
                 <Link href="mailto:skander.karoui@gmail.com">
-                  contact me <Mail className="ml-2 h-4 w-4" />
+                  Contact me <Mail className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
-            <p className="text-primary foreground mb-4">
+            <p className="text-primaryforeground mb-4">
               If you're interested in checking out my other socials, you can
               find them here:
             </p>
