@@ -152,7 +152,7 @@ export default function TimelinePage() {
                   </ul>
                 </li>
                 <li className="text-primary">
-                  Participated in the BirdCLEF Kaggle competition where I worked on
+                  Participated in the BirdCLEF 2024 Kaggle competition where I worked on
                   bird species identification using EfficientNetV2 [
                   <a
                     href="https://www.kaggle.com/code/skanderkaroui/birdclef24-skander-s-attempt-train/notebook"
