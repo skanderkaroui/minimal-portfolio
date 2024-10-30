@@ -172,11 +172,10 @@ export function PortfolioComponent() {
               </li>
               <li>
                 Learning about data structures and algorithms while solving
-                LeetCode problems. Currently solved{" "}
+                LeetCode problems, currently solved{" "}
                 <a href="https://leetcode.com/skirrrrrra" className="link-blue">
                   <LeetCodeStats /> problems
                 </a>
-                .
               </li>
               <li>
                 Completing the{" "}
@@ -204,7 +203,7 @@ export function PortfolioComponent() {
                   radio club
                 </a>{" "}
                 last year, which was composed of 50 members. We organized events
-                and created digital content.
+                and created digital content
               </li>
               <li>
                 Took part in the OST competition, during which I worked with{" "}
@@ -213,7 +212,7 @@ export function PortfolioComponent() {
                 </a>{" "}
                 as a Business Developer. We attended over 100 hours of
                 entrepreneurship and startup training and won second prize in
-                the competition.
+                the competition
               </li>
               <li>
                 Built more than 5 AI and software projects{" "}
@@ -227,7 +226,7 @@ export function PortfolioComponent() {
               </li>
               <li>
                 Completed 90 hours of Data Science training and received a "Data
-                Science with Python" certification from Datacamp.
+                Science with Python" certification from Datacamp
               </li>
               <li>
                 Worked on{" "}
@@ -260,11 +259,11 @@ export function PortfolioComponent() {
                 >
                   books
                 </a>{" "}
-                that I've read or am currently reading.
+                that I've read or am currently reading
               </li>
               <li>
                 I’m passionate about sports and have been lifting weights on and
-                off for over 4 years now.
+                off for over 4 years now
               </li>
               <li>
                 I also do random stuff, check out my{" "}
