@@ -175,10 +175,17 @@ export function PortfolioComponent() {
                 LeetCode problems. Currently solved{" "}
                 <a href="https://leetcode.com/skirrrrrra" className="link-blue">
                   <LeetCodeStats /> problems
-                </a>.
+                </a>
+                .
               </li>
               <li>
-                Completing the <a href="https://aws.amazon.com/machine-learning/udacity/" className="link-blue">AWS Machine Learning Engineer Program</a>.
+                Completing the{" "}
+                <a
+                  href="https://aws.amazon.com/machine-learning/udacity/"
+                  className="link-blue"
+                >
+                  AWS Machine Learning Engineer Program
+                </a>
               </li>
             </ul>
           </section>
@@ -215,11 +222,12 @@ export function PortfolioComponent() {
                   className="text-blue-500 transition-colors duration-400 ease-in-out hover:text-yellow-500 hover:underline"
                 >
                   (more here)
-                </a>.
+                </a>
+                .
               </li>
               <li>
-                Completed 90 hours of Data Science training and received a
-                "Data Science with Python" certification from Datacamp.
+                Completed 90 hours of Data Science training and received a "Data
+                Science with Python" certification from Datacamp.
               </li>
               <li>
                 Worked on{" "}
@@ -234,7 +242,39 @@ export function PortfolioComponent() {
                   Insaf
                 </a>
                 , a website for preparatory students generating 200k views per
-                year.
+                year
+              </li>
+            </ul>
+          </section>
+
+          <section id="fun-stuff">
+            <h2 className="text-2xl font-semibold mb-6">
+              What I Do in My Free Time
+            </h2>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>
+                I love reading books. Here are some{" "}
+                <a
+                  href="https://www.goodreads.com/review/list/59496587"
+                  className="link-blue"
+                >
+                  books
+                </a>{" "}
+                that I've read or am currently reading.
+              </li>
+              <li>
+                I’m passionate about sports and have been lifting weights on and
+                off for over 4 years now.
+              </li>
+              <li>
+                I also do random stuff, check out my{" "}
+                <a
+                  href="https://www.instagram.com/skander_karoui"
+                  className="link-blue"
+                >
+                  Instagram
+                </a>
+                if you're interested
               </li>
             </ul>
           </section>
