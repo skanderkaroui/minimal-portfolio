@@ -272,7 +272,7 @@ export function PortfolioComponent() {
                   className="link-blue"
                 >
                   Instagram
-                </a>
+                </a>{" "}
                 if you're interested
               </li>
             </ul>
