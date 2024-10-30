@@ -177,6 +177,9 @@ export function PortfolioComponent() {
                   <LeetCodeStats /> problems
                 </a>.
               </li>
+              <li>
+                Completing the <a href="https://aws.amazon.com/machine-learning/udacity/" className="link-blue">AWS Machine Learning Engineer Program</a>.
+              </li>
             </ul>
           </section>
 
