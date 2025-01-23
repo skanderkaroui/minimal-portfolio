@@ -27,13 +27,6 @@ const LeetCodeStats = () => {
         );
         const data = await response.json();
 
-        // Define the type for the response data
-        type LeetCodeData = {
-          status: string;
-          totalSolved: number;
-          // ... other fields available but not needed for this use case
-        };
-
         if (data.status === "success") {
           setSolvedCount(data.totalSolved.toString());
         } else {
