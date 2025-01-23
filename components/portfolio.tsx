@@ -23,31 +23,22 @@ const LeetCodeStats = () => {
     const fetchLeetCodeStats = async () => {
       try {
         const response = await fetch(
-          "https://leetcodeapi-v1.vercel.app/skirrrrrra"
+          "https://leetcode-stats-api.herokuapp.com/skirrrrrra"
         );
         const data = await response.json();
 
         // Define the type for the response data
-        type SubmissionStats = {
-          difficulty: string;
-          count: number;
-        };
-
         type LeetCodeData = {
-          skirrrrrra: {
-            submitStatsGlobal: {
-              acSubmissionNum: SubmissionStats[];
-            };
-          };
+          status: string;
+          totalSolved: number;
+          // ... other fields available but not needed for this use case
         };
 
-        const totalSolved =
-          (
-            data as LeetCodeData
-          ).skirrrrrra.submitStatsGlobal.acSubmissionNum.find(
-            (item: SubmissionStats) => item.difficulty === "All"
-          )?.count || 0; // Use optional chaining and default to 0 if not found
-        setSolvedCount(totalSolved.toString()); // Convert number to string
+        if (data.status === "success") {
+          setSolvedCount(data.totalSolved.toString());
+        } else {
+          console.error("Failed to fetch LeetCode stats:", data.message);
+        }
       } catch (error) {
         console.error("Failed to fetch LeetCode stats:", error);
       }
@@ -167,23 +158,22 @@ export function PortfolioComponent() {
             </h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                An AI voice assistant called "auto" designed to help make better
-                decisions in meetings.
+                Building{" "}
+                <a
+                  href="https://replypilot.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-blue"
+                >
+                  ReplyPilot
+                </a>
+                , an AI-powered social media copilot that helps professionals engage with their audience authentically across multiple platforms
               </li>
               <li>
                 Learning about data structures and algorithms while solving
                 LeetCode problems, currently solved{" "}
                 <a href="https://leetcode.com/skirrrrrra" className="link-blue">
                   <LeetCodeStats /> problems
-                </a>
-              </li>
-              <li>
-                Completing the{" "}
-                <a
-                  href="https://aws.amazon.com/machine-learning/udacity/"
-                  className="link-blue"
-                >
-                  AWS Machine Learning Engineer Program
                 </a>
               </li>
             </ul>
@@ -194,6 +184,10 @@ export function PortfolioComponent() {
               What I've done so far
             </h2>
             <ul className="list-disc pl-5 space-y-1">
+              <li>
+                Built an AI voice assistant called "auto" designed to help make better
+                decisions in meetings
+              </li>
               <li>
                 Served as a Team Leader for my university's{" "}
                 <a
@@ -262,7 +256,7 @@ export function PortfolioComponent() {
                 that I've read or am currently reading
               </li>
               <li>
-                I’m passionate about sports and have been lifting weights on and
+                I'm passionate about sports and have been lifting weights on and
                 off for over 4 years now
               </li>
               <li>
