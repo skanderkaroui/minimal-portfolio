@@ -158,7 +158,7 @@ export function PortfolioComponent() {
             </h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                Building{" "}
+                SWE intern at{" "}
                 <a
                   href="https://replypilot.app/"
                   target="_blank"
@@ -167,7 +167,7 @@ export function PortfolioComponent() {
                 >
                   ReplyPilot
                 </a>
-                , an AI-powered social media copilot that helps professionals engage with their audience authentically across multiple platforms
+                {" "}team, building a marketing AI agent that automates social media engagement and growth
               </li>
               <li>
                 Learning about data structures and algorithms while solving
