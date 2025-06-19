@@ -137,10 +137,9 @@ export function PortfolioComponent() {
           <section id="about">
             <div className="text-center">
               <p className="text-primary">
-                I am a final-year engineering student from Tunisia pursuing a
-                degree in Telecommunication Engineering. I am primarily
-                interested in AI and entrepreneurship, and I would love to
-                contribute to any project that sparks my interest.
+                I am a Telecommunication engineer just recently graduated from ENET'Com. Primarily
+                interested in AI and startups, and actively working
+                on new exciting projects everyday.
               </p>
             </div>
           </section>
