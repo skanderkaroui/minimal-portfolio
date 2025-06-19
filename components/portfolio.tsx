@@ -150,16 +150,29 @@ export function PortfolioComponent() {
             </h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                SWE intern at{" "}
+                Working on {" "}
                 <a
-                  href="https://replypilot.app/"
+                  href="https://www.ormelo.tech/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-blue"
                 >
-                  ReplyPilot
+                   Ormelo
+                  </a>
+                  {" "}, an AI agent that scours the internet and finds you, your ideal customer.
+              </li>
+              <li>
+                Software Engineer at{" "}
+                <a
+                  href="https://grais.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-blue"
+                >
+                  Grais
                 </a>
-                {" "}team, building a marketing AI agent that automates social media engagement and growth
+                {" "}, we are building a conversational AI agent designed for social media,
+                think of it as Cursor but for Whatsapp
               </li>
               <li>
                 Learning about data structures and algorithms while solving
