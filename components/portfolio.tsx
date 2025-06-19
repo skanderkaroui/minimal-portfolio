@@ -88,7 +88,7 @@ export function PortfolioComponent() {
             Telecommunication Engineer
           </p>
           <p className="text-lg md:text-xl text-muted-foreground mb-4">
-            Passionate about <span className="font-bold text-primary">AI</span>{" "}
+            Working on <span className="font-bold text-primary">AI</span>{" "}
             &{" "}
             <span className="font-bold text-primary">Software Engineering</span>
           </p>
