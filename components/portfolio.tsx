@@ -159,7 +159,7 @@ export function PortfolioComponent() {
                 >
                    Ormelo
                   </a>
-                  {" "}, an AI agent that scours the internet and finds you, your ideal customer.
+                  , an AI agent that scours the internet and finds you, your ideal customer.
               </li>
               <li>
                 Software Engineer at{" "}
@@ -171,7 +171,7 @@ export function PortfolioComponent() {
                 >
                   Grais
                 </a>
-                {" "}, we are building a conversational AI agent designed for social media,
+                , we are building a conversational AI agent designed for social media,
                 think of it as Cursor but for Whatsapp
               </li>
               <li>
