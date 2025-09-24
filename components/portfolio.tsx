@@ -162,7 +162,7 @@ export function PortfolioComponent() {
                   , an AI agent that scours the internet and finds you, your ideal customer.
               </li>
               <li>
-                Software Engineer at{" "}
+                Founding AI Engineer at{" "}
                 <a
                   href="https://grais.ai/"
                   target="_blank"
