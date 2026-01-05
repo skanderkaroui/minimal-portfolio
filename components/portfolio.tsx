@@ -253,7 +253,7 @@ export function PortfolioComponent() {
               <li>
                 I love reading books. Here are some{" "}
                 <a
-                  href="https://www.goodreads.com/review/list/59496587"
+                  href="https://www.goodreads.com/review/list/59496587-skander-karoui?shelf=read"
                   className="link-blue"
                 >
                   books
