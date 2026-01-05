@@ -258,7 +258,7 @@ export function PortfolioComponent() {
                 >
                   books
                 </a>{" "}
-                that I've read or am currently reading
+                that I've read
               </li>
               <li>
                 I'm passionate about sports and have been lifting weights on and
