@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { promises as fs } from "node:fs";
+import path from "node:path";
 
 import { Button } from "@/components/ui/button";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
@@ -19,6 +21,7 @@ type BlogPost = {
   done: "Yes" | "No";
   image?: string;
   content?: string;
+  contentPath?: string;
   contentType?: "markdown" | "text";
 };
 
@@ -32,6 +35,23 @@ export async function generateStaticParams() {
   }));
 }
 
+async function getPostContent(post: BlogPost) {
+  if (post.contentType === "text") {
+    return (post.content ?? "This article is currently being prepared.").trim();
+  }
+
+  if (post.contentType === "markdown" && post.contentPath) {
+    try {
+      const resolvedPath = path.join(process.cwd(), post.contentPath);
+      return (await fs.readFile(resolvedPath, "utf8")).trim();
+    } catch {
+      return "This article is currently being prepared.";
+    }
+  }
+
+  return (post.content ?? "").trim();
+}
+
 export default async function BlogPostPage({
   params,
 }: {
@@ -40,6 +60,7 @@ export default async function BlogPostPage({
   const { slug } = await params;
   const post = publishedPosts.find((item) => item.titleUrl === slug);
   if (!post) return notFound();
+  const content = await getPostContent(post);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -79,7 +100,7 @@ export default async function BlogPostPage({
           ) : null}
 
           {post.contentType === "text" ? (
-            <p className="mt-6">{post.content ?? "This article is currently being prepared."}</p>
+            <p className="mt-6">{content}</p>
           ) : (
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
@@ -106,7 +127,7 @@ export default async function BlogPostPage({
                 ),
               }}
             >
-              {(post.content ?? "").trim()}
+              {content}
             </ReactMarkdown>
           )}
         </article>
