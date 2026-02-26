@@ -715,7 +715,6 @@ export default function TimelinePage() {
                     <TimelineItem
                       key={`${item.title}-${idx}`}
                       variant={item.variant}
-                      className={item.className}
                     >
                       <TimelineItemDate>{item.date}</TimelineItemDate>
                       <TimelineItemTitle>{item.title}</TimelineItemTitle>
