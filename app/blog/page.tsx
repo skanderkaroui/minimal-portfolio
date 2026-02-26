@@ -1,5 +1,6 @@
 import Link from "next/link";
 import blogPosts from "@/app/data/blogpost.json";
+import { Button } from "@/components/ui/button";
 import { Calendar, ChevronLeft, Clock } from "lucide-react";
 
 type BlogPost = {
