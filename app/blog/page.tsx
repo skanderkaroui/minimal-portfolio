@@ -33,6 +33,10 @@ export default function BlogPage() {
           <p className="text-lg text-muted-foreground">Thoughts, ideas, and insights about things I'm interested in</p>
         </header>
 
+        <div className="px-2 py-6">
+          <div className="border-b border-border" />
+        </div>
+
         <main>
           <section className="divide-y divide-border">
             {posts.map((post) => (
