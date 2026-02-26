@@ -1,8 +1,56 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+
+const embeddableSocialPosts = [
+  {
+    title: "Instagram Reel",
+    src: "https://www.instagram.com/reel/DAwD0-WunRu/embed",
+  },
+  {
+    title: "Instagram Reel 1",
+    src: "https://www.instagram.com/p/C358VPeI8Um/embed",
+  },
+  {
+    title: "Instagram Reel 2",
+    src: "https://www.instagram.com/p/C3vVsZaoM_G/embed",
+  },
+  {
+    title: "Instagram Post 1",
+    src: "https://www.instagram.com/p/C0r-AriIs_-/embed",
+  },
+  {
+    title: "Instagram Post 2",
+    src: "https://www.instagram.com/p/CxgnjMGoDMJ/embed",
+  },
+  {
+    title: "Instagram Post 3",
+    src: "https://www.instagram.com/p/CxqtWLuocPu/embed",
+  },
+];
+
+const facebookEmbedUrl =
+  "https://www.facebook.com/plugins/post.php?href=https://fb.watch/xhWaJoAgxo/";
+
+const renderInstagramPost = (
+  src: string,
+  title: string,
+  containerClass = "max-w-[340px] w-full aspect-[9/16]"
+) => (
+  <div
+    key={src}
+    className={`${containerClass} mx-auto relative bg-secondary rounded-lg overflow-hidden`}
+  >
+    <iframe
+      src={src}
+      title={title}
+      className="w-full h-full"
+      loading="lazy"
+      frameBorder="0"
+      allowFullScreen
+    ></iframe>
+  </div>
+);
 
 export default function MarketingPortfolio() {
   return (
@@ -36,14 +84,10 @@ export default function MarketingPortfolio() {
             <div className="space-y-6">
               <div>
                 <h4 className="font-semibold mb-3">Personal Content</h4>
-                <div className="max-w-[340px] w-full aspect-[9/16] mx-auto relative bg-secondary rounded-lg overflow-hidden">
-                  <iframe
-                    src="https://www.instagram.com/reel/DAwD0-WunRu/embed"
-                    className="w-full h-full"
-                    frameBorder="0"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+                {renderInstagramPost(
+                  embeddableSocialPosts[0].src,
+                  embeddableSocialPosts[0].title,
+                )}
               </div>
 
               <div>
@@ -52,51 +96,34 @@ export default function MarketingPortfolio() {
                   {/* Reels */}
                   <div className="space-y-8">
                     <h5 className="font-medium mb-3">Reels</h5>
-                    <div className="max-w-[340px] w-full aspect-[9/16] mx-auto relative bg-secondary rounded-lg overflow-hidden">
-                      <iframe
-                        src="https://www.instagram.com/p/C358VPeI8Um/embed"
-                        className="w-full h-full"
-                        frameBorder="0"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                    <div className="max-w-[340px] w-full aspect-[9/16] mx-auto relative bg-secondary rounded-lg overflow-hidden">
-                      <iframe
-                        src="https://www.instagram.com/p/C3vVsZaoM_G/embed"
-                        className="w-full h-full"
-                        frameBorder="0"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
+                    {renderInstagramPost(
+                      embeddableSocialPosts[1].src,
+                      embeddableSocialPosts[1].title,
+                    )}
+                    {renderInstagramPost(
+                      embeddableSocialPosts[2].src,
+                      embeddableSocialPosts[2].title,
+                    )}
                   </div>
 
                   {/* Square Posts */}
                   <div className="space-y-4">
                     <h5 className="font-medium mb-3">Posts</h5>
-                    <div className="max-w-[340px] w-full aspect-square mx-auto relative bg-secondary rounded-lg overflow-hidden">
-                      <iframe
-                        src="https://www.instagram.com/p/C0r-AriIs_-/embed"
-                        className="w-full h-full"
-                        frameBorder="0"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                    <div className="max-w-[340px] w-full aspect-square mx-auto relative bg-secondary rounded-lg overflow-hidden">
-                      <iframe
-                        src="https://www.instagram.com/p/CxgnjMGoDMJ/embed"
-                        className="w-full h-full"
-                        frameBorder="0"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                    <div className="max-w-[340px] w-full aspect-square mx-auto relative bg-secondary rounded-lg overflow-hidden">
-                      <iframe
-                        src="https://www.instagram.com/p/CxqtWLuocPu/embed"
-                        className="w-full h-full"
-                        frameBorder="0"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
+                    {renderInstagramPost(
+                      embeddableSocialPosts[3].src,
+                      embeddableSocialPosts[3].title,
+                      "max-w-[340px] w-full aspect-square",
+                    )}
+                    {renderInstagramPost(
+                      embeddableSocialPosts[4].src,
+                      embeddableSocialPosts[4].title,
+                      "max-w-[340px] w-full aspect-square",
+                    )}
+                    {renderInstagramPost(
+                      embeddableSocialPosts[5].src,
+                      embeddableSocialPosts[5].title,
+                      "max-w-[340px] w-full aspect-square",
+                    )}
                   </div>
                 </div>
 
@@ -105,8 +132,10 @@ export default function MarketingPortfolio() {
                   <h5 className="font-medium mb-3">Facebook Content</h5>
                   <div className="max-w-[500px] w-full aspect-video mx-auto relative bg-secondary rounded-lg overflow-hidden">
                     <iframe
-                      src="https://www.facebook.com/plugins/post.php?href=https://fb.watch/xhWaJoAgxo/"
+                      src={facebookEmbedUrl}
+                      title="Facebook post"
                       className="w-full h-full"
+                      loading="lazy"
                       frameBorder="0"
                       allowFullScreen
                     ></iframe>
