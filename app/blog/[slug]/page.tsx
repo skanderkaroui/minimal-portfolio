@@ -44,85 +44,70 @@ export default async function BlogPostPage({
   return (
     <div className="min-h-screen bg-background text-foreground">
       <ScrollProgress />
-      <div className="max-w-3xl mx-auto px-4 py-8 md:py-16">
+      <div className="mx-auto max-w-3xl px-4 py-8 md:py-16">
         <Link href="/blog" passHref>
-          <Button variant="ghost" className="mb-8">
+          <Button variant="ghost" className="mb-6">
             <ChevronLeft className="mr-2 h-4 w-4" />
             Back to Blog
           </Button>
         </Link>
 
-        <article className="prose dark:prose-invert lg:prose-lg xl:prose-xl max-w-none">
-          <h1 className="text-4xl font-bold">{post.title}</h1>
-          <div className="flex items-center text-muted-foreground mb-6">
-            <Calendar className="mr-2 h-4 w-4" />
-            <span className="mr-4">{post.date}</span>
-            <Clock className="mr-2 h-4 w-4" />
-            <span>{post.readTime}</span>
-          </div>
+        <article className="blog-article-shell font-bookerly">
+          <header className="border-b border-border pb-8">
+            <h1 className="article-title">{post.title}</h1>
+            {post.description ? (
+              <p className="post-subtitle">{post.description}</p>
+            ) : null}
+            <div className="meta-row">
+              <Calendar className="h-4 w-4" />
+              <span>{post.date}</span>
+              <span className="meta-divider" />
+              <Clock className="h-4 w-4" />
+              <span>{post.readTime}</span>
+            </div>
+          </header>
 
           {post.image ? (
             <Image
               src={post.image}
-              alt=""
+              alt={post.title}
               width={1200}
               height={675}
-              className="mb-8 h-auto w-full rounded-lg object-cover"
+              className="my-8 h-auto w-full rounded-lg object-cover"
               priority
             />
           ) : null}
 
-          <p className="text-lg">{post.description}</p>
-
           {post.contentType === "text" ? (
-            <p className="text-lg leading-relaxed">
-              {post.content ?? "This article is currently being prepared."}
-            </p>
+            <p className="mt-6">{post.content ?? "This article is currently being prepared."}</p>
           ) : (
-            <div className="space-y-6 text-lg leading-relaxed">
-              <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
-                components={{
-                  p: ({ children }) => (
-                    <p className="text-lg leading-relaxed">{children}</p>
-                  ),
-                  h1: ({ children }) => (
-                    <h1 className="text-2xl font-semibold mt-6 mb-2">
-                      {children}
-                    </h1>
-                  ),
-                  h2: ({ children }) => (
-                    <h2 className="text-2xl font-semibold mt-6 mb-2">
-                      {children}
-                    </h2>
-                  ),
-                  h3: ({ children }) => (
-                    <h3 className="text-xl font-semibold mt-4 mb-2">
-                      {children}
-                    </h3>
-                  ),
-                  a: ({ children, href }) => (
-                    <a href={href} className="underline underline-offset-4">
-                      {children}
-                    </a>
-                  ),
-                  ul: ({ children }) => (
-                    <ul className="list-disc space-y-2 pl-6">{children}</ul>
-                  ),
-                  img: ({ src, alt }) => (
-                    <div className="my-6 overflow-hidden rounded-lg">
-                      <img
-                        src={src}
-                        alt={alt ?? ""}
-                        className="h-auto w-full rounded-lg object-cover"
-                      />
-                    </div>
-                  ),
-                }}
-              >
-                {(post.content ?? "").trim()}
-              </ReactMarkdown>
-            </div>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                p: ({ children }) => <p>{children}</p>,
+                h1: ({ children }) => <h1>{children}</h1>,
+                h2: ({ children }) => <h2>{children}</h2>,
+                h3: ({ children }) => <h3>{children}</h3>,
+                h4: ({ children }) => <h4>{children}</h4>,
+                a: ({ href, children }) => (
+                  <a href={href}>{children}</a>
+                ),
+                ul: ({ children }) => <ul>{children}</ul>,
+                ol: ({ children }) => <ol className="my-6 list-decimal space-y-2 pl-6">{children}</ol>,
+                li: ({ children }) => <li>{children}</li>,
+                hr: () => <hr />,
+                blockquote: ({ children }) => <blockquote>{children}</blockquote>,
+                img: ({ src, alt }) => (
+                  <img
+                    src={src}
+                    alt={alt ?? ""}
+                    loading="lazy"
+                  />
+                ),
+              }}
+            >
+              {(post.content ?? "").trim()}
+            </ReactMarkdown>
           )}
         </article>
       </div>
