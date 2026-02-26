@@ -1,6 +1,9 @@
 import { Calendar, ChevronLeft, Clock } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 import { Button } from "@/components/ui/button";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
@@ -28,17 +31,14 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function BlogPostPage({
+export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const post = publishedPosts.find((item) => item.titleUrl === params.slug);
+  const { slug } = await params;
+  const post = publishedPosts.find((item) => item.titleUrl === slug);
   if (!post) return notFound();
-
-  const paragraphs = (post.content ?? "")
-    .split("\n\n")
-    .filter(Boolean);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -51,9 +51,9 @@ export default function BlogPostPage({
           </Button>
         </Link>
 
-        <article className="prose dark:prose-invert lg:prose-lg xl:prose-xl max-w-none">
-          <h1 className="text-4xl font-bold">{post.title}</h1>
-          <div className="flex items-center text-muted-foreground mb-6">
+          <article className="prose dark:prose-invert lg:prose-lg xl:prose-xl max-w-none">
+            <h1 className="text-4xl font-bold">{post.title}</h1>
+            <div className="flex items-center text-muted-foreground mb-6">
             <Calendar className="mr-2 h-4 w-4" />
             <span className="mr-4">{post.date}</span>
             <Clock className="mr-2 h-4 w-4" />
@@ -61,27 +61,46 @@ export default function BlogPostPage({
           </div>
 
           {post.image ? (
-            <img
+            <Image
               src={post.image}
               alt=""
+              width={1200}
+              height={675}
               className="mb-8 h-auto w-full rounded-lg object-cover"
+              priority
             />
           ) : null}
 
           <p className="text-lg">{post.description}</p>
 
-          {paragraphs.length > 0 ? (
-            paragraphs.map((paragraph, index) => (
-              <p key={index} className="text-lg leading-relaxed mb-6">
-                {paragraph}
-              </p>
-            ))
-          ) : (
-            <p className="text-lg">
-              This article is currently being prepared. Check back soon for the full
-              write-up and key takeaways.
-            </p>
-          )}
+          <ReactMarkdown
+            className="space-y-6 text-lg leading-relaxed"
+            remarkPlugins={[remarkGfm]}
+            components={{
+              p: ({ children }) => (
+                <p className="text-lg leading-relaxed">{children}</p>
+              ),
+              a: ({ children, href }) => (
+                <a href={href} className="underline underline-offset-4">
+                  {children}
+                </a>
+              ),
+              ul: ({ children }) => (
+                <ul className="list-disc space-y-2 pl-6">{children}</ul>
+              ),
+              img: ({ src, alt }) => (
+                <div className="my-6 overflow-hidden rounded-lg">
+                  <img
+                    src={src}
+                    alt={alt ?? ""}
+                    className="h-auto w-full rounded-lg object-cover"
+                  />
+                </div>
+              ),
+            }}
+          >
+            {(post.content ?? "").trim()}
+          </ReactMarkdown>
         </article>
       </div>
     </div>
