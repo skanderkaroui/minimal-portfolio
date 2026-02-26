@@ -121,6 +121,18 @@
     @apply mt-8 mb-3 text-[1.45rem] leading-snug font-semibold;
   }
 
+  .blog-article-shell pre {
+    @apply my-8 overflow-x-auto rounded-lg border border-border bg-muted p-4;
+  }
+
+  .blog-article-shell code {
+    @apply rounded-sm bg-muted px-1 py-0.5 font-mono text-sm;
+  }
+
+  .blog-article-shell pre code {
+    @apply p-0 bg-transparent;
+  }
+
   .blog-article-shell ul {
     @apply my-6 list-disc space-y-2 pl-6;
   }
