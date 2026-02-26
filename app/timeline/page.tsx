@@ -174,6 +174,35 @@ const timelineData = [
     className: "text-black"
   },
   {
+    title: "EF Builders League Hackathon",
+    description: (
+      <p>
+        Took part in EF&apos;s Builders League, selected among many applicants, and
+        built an end-to-end multi-AI agent system for lead generation where you can
+        describe your target businesses. Built from the same work that later led to{" "}
+        <a
+          href="https://ormelo.tech"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-blue"
+        >
+          ormelo.tech
+        </a>.{" "}
+        <a
+          href="https://www.linkedin.com/posts/skander-karoui_wonder-what-happens-when-you-bring-different-activity-7328747739171700737-jO7x?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD5BQGEBIrgHt-lTZSURdnldQxBJJi607LI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-blue"
+        >
+          More here
+        </a>
+        .
+      </p>
+    ),
+    date: new Date("2025-05-01"),
+    variant: "outline" as const
+  },
+  {
     title: "AI Certifications & Competition",
     description: (
       <>
@@ -379,6 +408,31 @@ export default function TimelinePage() {
                     Started as the first engineer in Grais&apos; AI team, leading
                     conversational AI projects and implementing end-to-end solutions
                     from frontend to backend.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="border-l-2 border-primary pl-4 pb-1">
+                <h2 className="text-xl font-semibold mb-2">May 2025</h2>
+                <ul className="list-disc list-inside space-y-2">
+                  <li className="text-primary">
+                    Took part in EF&apos;s Builders League, where I was selected among
+                    many applicants and built an end-to-end multi-AI agent system for
+                    lead generation by defining target businesses. The project later led
+                    to{" "}
+                    <a href="https://ormelo.tech" target="_blank" rel="noopener noreferrer" className="link-blue">
+                      ormelo.tech
+                    </a>{" "}
+                    .{" "}
+                    <a
+                      href="https://www.linkedin.com/posts/skander-karoui_wonder-what-happens-when-you-bring-different-activity-7328747739171700737-jO7x?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD5BQGEBIrgHt-lTZSURdnldQxBJJi607LI"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-blue"
+                    >
+                      More here
+                    </a>
+                    .
                   </li>
                 </ul>
               </div>
