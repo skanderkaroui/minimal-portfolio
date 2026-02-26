@@ -1,10 +1,23 @@
 import Link from "next/link";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import blogPosts from '@/app/data/blogpost.json';
-import { Button } from "@/components/ui/button";
-import { Calendar, ChevronLeft } from "lucide-react";
+import blogPosts from "@/app/data/blogpost.json";
+import { Calendar, ChevronLeft, Clock } from "lucide-react";
+
+type BlogPost = {
+  id: string;
+  title: string;
+  titleUrl: string;
+  description: string;
+  date: string;
+  readTime: string;
+  done: "Yes" | "No";
+  image?: string;
+};
+
+const publishedPosts = (blogPosts as BlogPost[]).filter((post) => post.done === "Yes");
 
 export default function BlogPage() {
+  const posts = publishedPosts;
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-4xl mx-auto px-4 py-8 md:py-16">
@@ -20,42 +33,39 @@ export default function BlogPage() {
         </header>
 
         <main>
-          <section className="grid gap-6 md:grid-cols-2">
-            {blogPosts.map((post) => {
-              const isPublished = post.done === "Yes";
-
-              return (
-              <Card key={post.id} className="flex flex-col">
-                <CardHeader>
-                  <CardTitle className="text-xl">
-                    {isPublished ? (
-                      <Link href={`/blog/${post.titleUrl}`} className="hover:underline">
+          <section className="divide-y divide-border">
+            {posts.map((post) => (
+              <article key={post.id} className="py-6 first:pt-0">
+                <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-6">
+                  <div className="min-w-0 flex-1">
+                    <Link href={`/blog/${post.titleUrl}`} className="group block">
+                      <h2 className="text-2xl md:text-3xl leading-tight font-semibold group-hover:underline">
                         {post.title}
-                      </Link>
-                    ) : (
-                      post.title
-                    )}
-                  </CardTitle>
-                  <CardDescription className="flex items-center">
-                    <Calendar className="mr-2 h-4 w-4" />
-                    {post.date} • {post.readTime}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{post.description}</p>
-                </CardContent>
-                <CardFooter className="mt-auto">
-                  {isPublished ? (
-                    <Link href={`/blog/${post.titleUrl}`} passHref>
-                      <Button variant="outline">Read More</Button>
+                      </h2>
+                      <p className="mt-3 text-base md:text-lg text-muted-foreground">
+                        {post.description}
+                      </p>
                     </Link>
-                  ) : (
-                    <Button variant="outline" disabled>Coming Soon</Button>
-                  )}
-                </CardFooter>
-              </Card>
-              );
-            })}
+                    <div className="mt-4 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+                      <Calendar className="h-4 w-4" />
+                      <span>{post.date}</span>
+                      <span>•</span>
+                      <Clock className="h-4 w-4" />
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                  {post.image ? (
+                    <div className="w-full md:w-60 flex-shrink-0">
+                      <img
+                        src={post.image}
+                        alt=""
+                        className="w-full h-auto rounded-md object-cover"
+                      />
+                    </div>
+                  ) : null}
+                </div>
+              </article>
+            ))}
           </section>
         </main>
       </div>
