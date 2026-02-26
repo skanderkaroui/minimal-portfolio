@@ -30,9 +30,21 @@
     "id": "4",
     "titleUrl": "leading-orbeats-radio-club",
     "title": "My Experience as Team Leader at University's Radio Club",
-    "description": "Reflections on my time as a team leader for my university’s radio club, focusing on event planning, digital content creation, and leadership skills developed.",
+    "description": "Reflections on my time as a team leader for my university\u2019s radio club, focusing on event planning, digital content creation, and leadership skills developed.",
     "date": "June 15, 2024",
     "readTime": "10 min read",
     "done": "No"
+  },
+  {
+    "id": "5",
+    "titleUrl": "chapter-sf",
+    "title": "Chapter SF",
+    "description": "relections on 2 weeks in the ai bubble",
+    "date": "February 26, 2026",
+    "readTime": "8 min read",
+    "done": "Yes",
+    "image": "/blog/chapter-sf-intro.gif",
+    "contentType": "markdown",
+    "contentPath": "app/data/blog/chapter-sf.md"
   }
 ]
