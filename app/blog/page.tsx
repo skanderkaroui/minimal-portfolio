@@ -21,7 +21,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="max-w-4xl mx-auto px-4 py-8 md:py-16">
+      <div className="max-w-4xl mx-auto px-4 py-8 md:py-16 font-bookerly">
         <header className="mb-8">
           <Link href="/" passHref>
             <Button variant="ghost" className="mb-4">
