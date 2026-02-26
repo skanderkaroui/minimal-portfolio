@@ -73,34 +73,35 @@ export default async function BlogPostPage({
 
           <p className="text-lg">{post.description}</p>
 
-          <ReactMarkdown
-            className="space-y-6 text-lg leading-relaxed"
-            remarkPlugins={[remarkGfm]}
-            components={{
-              p: ({ children }) => (
-                <p className="text-lg leading-relaxed">{children}</p>
-              ),
-              a: ({ children, href }) => (
-                <a href={href} className="underline underline-offset-4">
-                  {children}
-                </a>
-              ),
-              ul: ({ children }) => (
-                <ul className="list-disc space-y-2 pl-6">{children}</ul>
-              ),
-              img: ({ src, alt }) => (
-                <div className="my-6 overflow-hidden rounded-lg">
-                  <img
-                    src={src}
-                    alt={alt ?? ""}
-                    className="h-auto w-full rounded-lg object-cover"
-                  />
-                </div>
-              ),
-            }}
-          >
-            {(post.content ?? "").trim()}
-          </ReactMarkdown>
+          <div className="space-y-6 text-lg leading-relaxed">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                p: ({ children }) => (
+                  <p className="text-lg leading-relaxed">{children}</p>
+                ),
+                a: ({ children, href }) => (
+                  <a href={href} className="underline underline-offset-4">
+                    {children}
+                  </a>
+                  ),
+                ul: ({ children }) => (
+                  <ul className="list-disc space-y-2 pl-6">{children}</ul>
+                ),
+                img: ({ src, alt }) => (
+                  <div className="my-6 overflow-hidden rounded-lg">
+                    <img
+                      src={src}
+                      alt={alt ?? ""}
+                      className="h-auto w-full rounded-lg object-cover"
+                    />
+                  </div>
+                ),
+              }}
+            >
+              {(post.content ?? "").trim()}
+            </ReactMarkdown>
+          </div>
         </article>
       </div>
     </div>
