@@ -34,5 +34,16 @@
     "date": "June 15, 2024",
     "readTime": "10 min read",
     "done": "No"
+  },
+  {
+    "id": "5",
+    "titleUrl": "thoughts-on-reader-first-product-design",
+    "title": "Thoughts on Reader-First Product Design",
+    "description": "A practical framework for designing web writing experiences that feel effortless while still showing personality.",
+    "date": "February 26, 2026",
+    "readTime": "8 min read",
+    "done": "Yes",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    "content": "If your website feels busy, it steals attention from the content itself. Reader-first design starts by making the main story the path of least resistance.\n\nThis means reducing visual noise, preserving clear rhythm, and giving users explicit context on where they are and how far they are into a long read. When you do this well, the interface disappears and the content gets to shine."
   }
 ]
