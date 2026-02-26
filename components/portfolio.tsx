@@ -28,7 +28,12 @@ const LeetCodeStats = () => {
           "https://leetcode-stats-api.herokuapp.com/skirrrrrra",
           { signal: controller.signal },
         );
+        if (!response.ok) {
+          throw new Error(`Failed request: ${response.status}`);
+        }
         const data = await response.json();
+
+        if (controller.signal.aborted) return;
 
         if (data.status === "success") {
           setSolvedCount(data.totalSolved.toString());
@@ -36,6 +41,9 @@ const LeetCodeStats = () => {
           console.error("Failed to fetch LeetCode stats:", data.message);
         }
       } catch (error) {
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
         console.error("Failed to fetch LeetCode stats:", error);
       }
     };
@@ -43,7 +51,9 @@ const LeetCodeStats = () => {
     fetchLeetCodeStats();
 
     return () => {
-      controller.abort();
+      if (!controller.signal.aborted) {
+        controller.abort();
+      }
     };
   }, []);
 
