@@ -29,6 +29,10 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shine effect */
 }
 
+:root {
+  --font-bookerly: "Bookerly", Georgia, "Times New Roman", serif;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -84,13 +88,80 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .font-bookerly {
+    font-family: var(--font-bookerly);
+  }
+
+  .blog-article-shell {
+    --blog-inline-link-color: rgb(22 163 74);
+  }
+
+  .blog-article-shell p {
+    @apply text-[1.08rem] leading-[1.8] text-foreground;
+  }
+
+  .blog-article-shell h1,
+  .blog-article-shell h2 {
+    @apply mt-10 mb-4 text-[1.9rem] leading-snug font-semibold;
+  }
+
+  .blog-article-shell h3,
+  .blog-article-shell h4 {
+    @apply mt-8 mb-3 text-[1.45rem] leading-snug font-semibold;
+  }
+
+  .blog-article-shell ul {
+    @apply my-6 list-disc space-y-2 pl-6;
+  }
+
+  .blog-article-shell ol {
+    @apply my-6 list-decimal space-y-2 pl-6;
+  }
+
+  .blog-article-shell li {
+    @apply pl-1;
+  }
+
+  .blog-article-shell a {
+    @apply text-emerald-700 underline underline-offset-4 decoration-emerald-600/50 hover:text-emerald-600 dark:text-emerald-300;
+  }
+
+  .blog-article-shell img {
+    @apply my-8 h-auto w-full rounded-md;
+  }
+
+  .blog-article-shell blockquote {
+    @apply border-l-2 border-border pl-4 italic text-muted-foreground;
+  }
+
+  .blog-article-shell hr {
+    @apply my-8 border-border;
+  }
+
+  .blog-article-shell .post-subtitle {
+    @apply mt-3 text-xl text-muted-foreground md:text-[1.35rem] leading-relaxed;
+  }
+
+  .blog-article-shell .meta-row {
+    @apply mt-8 flex flex-wrap items-center gap-2 text-xs md:text-sm text-muted-foreground tracking-wide;
+  }
+
+  .blog-article-shell .meta-divider {
+    @apply h-1 w-1 rounded-full bg-muted-foreground/50;
+  }
+
+  .blog-article-shell .article-title {
+    @apply text-4xl font-semibold leading-[1.05] md:text-5xl;
   }
 }
