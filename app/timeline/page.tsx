@@ -166,15 +166,16 @@ const timelineData = [
     description: (
       <p>
         Gave an AI lecture to a group of high school students.{" "}
+        [
         <a
           href="https://docs.google.com/presentation/d/1yZPh618azaIQ14VsnLo6bjsZ59DWyc_j66u9Cd9hj7k/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="link-blue"
         >
-          Slide deck
+          slides
         </a>
-        .
+        ].
       </p>
     ),
     date: new Date("2025-06-15"),
@@ -186,15 +187,16 @@ const timelineData = [
       <p>
         Gave another AI presentation to high school students focused on jobs in the
         AI era.{" "}
+        [
         <a
           href="https://docs.google.com/presentation/d/18YLJidYylY660YJITL0aa0_I7Z9-nlahHRbJC72OYeA/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="link-blue"
         >
-          Slide deck
+          slides
         </a>
-        .
+        ].
       </p>
     ),
     date: new Date("2025-06-25"),
@@ -481,28 +483,30 @@ export default function TimelinePage() {
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
                     Gave an AI lecture to a group of high school students.{" "}
+                    [
                     <a
                       href="https://docs.google.com/presentation/d/1yZPh618azaIQ14VsnLo6bjsZ59DWyc_j66u9Cd9hj7k/edit?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-blue"
                     >
-                      Slide deck
+                      slides
                     </a>
-                    .
+                    ].
                   </li>
                   <li className="text-primary">
                     Gave another AI presentation to high school students about jobs in
                     the AI era.{" "}
+                    [
                     <a
                       href="https://docs.google.com/presentation/d/18YLJidYylY660YJITL0aa0_I7Z9-nlahHRbJC72OYeA/edit?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-blue"
                     >
-                      Slide deck
+                      slides
                     </a>
-                    .
+                    ].
                   </li>
                 </ul>
               </div>
