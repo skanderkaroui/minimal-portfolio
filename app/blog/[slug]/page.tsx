@@ -19,6 +19,7 @@ type BlogPost = {
   done: "Yes" | "No";
   image?: string;
   content?: string;
+  contentType?: "markdown" | "text";
 };
 
 const publishedPosts = (blogPosts as BlogPost[]).filter(
@@ -51,9 +52,9 @@ export default async function BlogPostPage({
           </Button>
         </Link>
 
-          <article className="prose dark:prose-invert lg:prose-lg xl:prose-xl max-w-none">
-            <h1 className="text-4xl font-bold">{post.title}</h1>
-            <div className="flex items-center text-muted-foreground mb-6">
+        <article className="prose dark:prose-invert lg:prose-lg xl:prose-xl max-w-none">
+          <h1 className="text-4xl font-bold">{post.title}</h1>
+          <div className="flex items-center text-muted-foreground mb-6">
             <Calendar className="mr-2 h-4 w-4" />
             <span className="mr-4">{post.date}</span>
             <Clock className="mr-2 h-4 w-4" />
@@ -73,35 +74,56 @@ export default async function BlogPostPage({
 
           <p className="text-lg">{post.description}</p>
 
-          <div className="space-y-6 text-lg leading-relaxed">
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              components={{
-                p: ({ children }) => (
-                  <p className="text-lg leading-relaxed">{children}</p>
-                ),
-                a: ({ children, href }) => (
-                  <a href={href} className="underline underline-offset-4">
-                    {children}
-                  </a>
+          {post.contentType === "text" ? (
+            <p className="text-lg leading-relaxed">
+              {post.content ?? "This article is currently being prepared."}
+            </p>
+          ) : (
+            <div className="space-y-6 text-lg leading-relaxed">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  p: ({ children }) => (
+                    <p className="text-lg leading-relaxed">{children}</p>
                   ),
-                ul: ({ children }) => (
-                  <ul className="list-disc space-y-2 pl-6">{children}</ul>
-                ),
-                img: ({ src, alt }) => (
-                  <div className="my-6 overflow-hidden rounded-lg">
+                  h1: ({ children }) => (
+                    <h2 className="text-2xl font-semibold mt-6 mb-2">
+                      {children}
+                    </h2>
+                  ),
+                  h2: ({ children }) => (
+                    <h2 className="text-2xl font-semibold mt-6 mb-2">
+                      {children}
+                    </h2>
+                  ),
+                  h3: ({ children }) => (
+                    <h3 className="text-xl font-semibold mt-4 mb-2">
+                      {children}
+                    </h3>
+                  ),
+                  a: ({ children, href }) => (
+                    <a href={href} className="underline underline-offset-4">
+                      {children}
+                    </a>
+                  ),
+                  ul: ({ children }) => (
+                    <ul className="list-disc space-y-2 pl-6">{children}</ul>
+                  ),
+                  img: ({ src, alt }) => (
+                    <div className="my-6 overflow-hidden rounded-lg">
                     <img
                       src={src}
                       alt={alt ?? ""}
                       className="h-auto w-full rounded-lg object-cover"
                     />
                   </div>
-                ),
-              }}
-            >
-              {(post.content ?? "").trim()}
-            </ReactMarkdown>
-          </div>
+                  ),
+                }}
+              >
+                {(post.content ?? "").trim()}
+              </ReactMarkdown>
+            </div>
+          )}
         </article>
       </div>
     </div>
