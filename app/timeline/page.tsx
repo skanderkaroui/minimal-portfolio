@@ -37,7 +37,7 @@ const timelineData = [
         </a>{" "}
         in San Francisco, wrote a small blog about my learnings here: {" "}
         <Link href="/blog/chapter-sf" className="link-blue">
-          Chapter SF
+          here
         </Link>
         .
       </p>
@@ -98,8 +98,13 @@ const timelineData = [
       <p>
         Worked on a Pantry App Tracker using Next.js and Firebase as part of the
         Headstarter AI program [
-        <Link href="https://pantryapp-pi.vercel.app/" className="link-blue">Demo</Link>,
-        <Link href="https://github.com/skanderkaroui/pantryapp" className="link-blue">Code</Link>].
+        <Link href="https://pantryapp-pi.vercel.app/" className="link-blue">
+          Demo
+        </Link>,{" "}
+        <Link href="https://github.com/skanderkaroui/pantryapp" className="link-blue">
+          Code
+        </Link>
+        ].
       </p>
     ),
     date: new Date("2024-07-01"),
@@ -111,11 +116,11 @@ const timelineData = [
       <>
         <p>
           Started working on <strong>auto</strong>, an AI voice assistant built with
-          Faster Whisper, OpenAI, and Google Text-to-Speech.  
+          Faster Whisper, OpenAI, and Google Text-to-Speech [
           <Link href="https://github.com/skanderkaroui/auto" className="link-blue">
             Code
           </Link>
-          .
+          ].
         </p>
         <p>
           Took part in Climate Change AI&apos;s{" "}
@@ -203,7 +208,9 @@ const timelineData = [
     variant: "secondary" as const
   },
   {
-    title: "Founding AI Engineer @ Grais",
+    title: (
+      <span className="text-black dark:text-white">Founding AI Engineer @ Grais</span>
+    ),
     description: (
       <p>
         Started as the first engineer in the team and worked on conversational AI
@@ -212,7 +219,6 @@ const timelineData = [
     ),
     date: new Date("2025-06-15"),
     variant: "destructive" as const,
-    className: "text-black"
   },
   {
     title: "EF Builders League Hackathon",
@@ -339,7 +345,7 @@ const timelineData = [
       <p>
         Selected as a Team Leader for{' '}
         <a className="link" href="https://www.facebook.com/RadioEnetcom/">
-                      Orbeats Radio Club ENET'Com
+          Orbeats Radio Club ENET'Com
         </a>, where I served from September 2023 to September 2024.
       </p>
     ),
@@ -404,34 +410,13 @@ export default function TimelinePage() {
         <main>
           {isListView ? (
             <section className="space-y-8">
-        <div className="border-l-2 border-primary pl-4 pb-1">
-                <h2 className="text-xl font-semibold mb-2">
-                  February 2026
-                </h2>
-      <ul className="list-disc list-inside space-y-2">
+              <div className="border-l-2 border-primary pl-4 pb-1">
+                <h2 className="text-xl font-semibold mb-2">February 2026</h2>
+                <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Attended the Silicon Valley Fellowship and took part in TreeHacks in
-                    San Francisco through{" "}
-                    <a
-                      href="https://siliconvalleyfellowship.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-blue"
-                    >
-                      Silicon Valley Fellowship
-                    </a>{" "}
-                    and{" "}
-                    <a
-                      href="https://treehacks.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-blue"
-                    >
-                      TreeHacks
-                    </a>
-                    , and wrote a small blog about my learnings in{" "}
+                    Attended the <a href="https://siliconvalleyfellowship.com/" target="_blank" rel="noopener noreferrer" className="link-blue">Silicon Valley Fellowship</a> and took part in <a href="https://treehacks.com/" target="_blank" rel="noopener noreferrer" className="link-blue">TreeHacks</a> in San Francisco, wrote a small blog about my learnings here:{" "}
                     <Link href="/blog/chapter-sf" className="link-blue">
-                      Chapter SF
+                      here
                     </Link>
                     .
                   </li>
@@ -442,45 +427,19 @@ export default function TimelinePage() {
                 <h2 className="text-xl font-semibold mb-2">June 2025</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Graduated from ENET&apos;Com with a degree in telecommunications
-                    engineering.
-                  </li>
-                  <li className="text-primary">
-                    Started as the first engineer in Grais&apos; AI team, leading
-                    conversational AI projects and implementing end-to-end solutions
-                    from frontend to backend.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="border-l-2 border-primary pl-4 pb-1">
-                <h2 className="text-xl font-semibold mb-2">May 2025</h2>
-                <ul className="list-disc list-inside space-y-2">
-                  <li className="text-primary">
-                    Took part in EF&apos;s Builders League, where I was selected among
-                    many applicants and built an end-to-end multi-AI agent system for
-                    lead generation by defining target businesses. The project later led
-                    to{" "}
-                    <a href="https://ormelo.tech" target="_blank" rel="noopener noreferrer" className="link-blue">
-                      ormelo.tech
-                    </a>{" "}
-                    .{" "}
+                    Gave an AI presentation to high school students focused on jobs in the
+                    AI era.{" "}
+                    [
                     <a
-                      href="https://www.linkedin.com/posts/skander-karoui_wonder-what-happens-when-you-bring-different-activity-7328747739171700737-jO7x?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD5BQGEBIrgHt-lTZSURdnldQxBJJi607LI"
+                      href="https://docs.google.com/presentation/d/18YLJidYylY660YJITL0aa0_I7Z9-nlahHRbJC72OYeA/edit?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-blue"
                     >
-                      More here
+                      slides
                     </a>
-                    .
+                    ].
                   </li>
-                </ul>
-              </div>
-
-              <div className="border-l-2 border-primary pl-4 pb-1">
-                <h2 className="text-xl font-semibold mb-2">June 2025</h2>
-                <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
                     Gave an AI lecture to a group of high school students.{" "}
                     [
@@ -495,16 +454,37 @@ export default function TimelinePage() {
                     ].
                   </li>
                   <li className="text-primary">
-                    Gave another AI presentation to high school students about jobs in
-                    the AI era.{" "}
-                    [
+                    Started as the first engineer in the team and worked on conversational AI systems, implementing end-to-end solutions from frontend to backend and cloud deployment.
+                  </li>
+                  <li className="text-primary">
+                    Graduated from ENET&apos;Com with a degree in telecommunications engineering.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="border-l-2 border-primary pl-4 pb-1">
+                <h2 className="text-xl font-semibold mb-2">May 2025</h2>
+                <ul className="list-disc list-inside space-y-2">
+                  <li className="text-primary">
+                    Took part in EF&apos;s Builders League, where I was selected among many
+                    applicants and built an end-to-end multi-AI agent system for lead
+                    generation by defining target businesses. The project later led to{" "}
                     <a
-                      href="https://docs.google.com/presentation/d/18YLJidYylY660YJITL0aa0_I7Z9-nlahHRbJC72OYeA/edit?usp=sharing"
+                      href="https://ormelo.tech"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="link-blue"
                     >
-                      slides
+                      ormelo.tech
+                    </a>{" "}
+                    [
+                    <a
+                      href="https://www.linkedin.com/posts/skander-karoui_wonder-what-happens-when-you-bring-different-activity-7328747739171700737-jO7x?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD5BQGEBIrgHt-lTZSURdnldQxBJJi607LI"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-blue"
+                    >
+                      More here
                     </a>
                     ].
                   </li>
@@ -515,8 +495,8 @@ export default function TimelinePage() {
                 <h2 className="text-xl font-semibold mb-2">January 2025</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Worked as an AI Engineer Intern at Grais, building conversational AI
-                    systems with RAG and end-to-end frontend/backend integration.
+                    Worked as a Software Engineer at ReplyPilot, reviewing and testing
+                    the codebase to improve stability and reliability.
                   </li>
                 </ul>
               </div>
@@ -525,16 +505,14 @@ export default function TimelinePage() {
                 <h2 className="text-xl font-semibold mb-2">December 2024</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Worked as a Software Engineer at Grais, reviewing and testing the
-                    codebase to improve reliability.
+                    Started as an AI Engineer Intern at Grais, building conversational AI
+                    systems with RAG and end-to-end frontend/backend integrations.
                   </li>
                 </ul>
               </div>
 
               <div className="border-l-2 border-primary pl-4 pb-1">
-                <h2 className="text-xl font-semibold mb-2">
-                  September 2024
-                </h2>
+                <h2 className="text-xl font-semibold mb-2">September 2024</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
                     Took part in the{" "}
@@ -550,40 +528,26 @@ export default function TimelinePage() {
               </div>
 
               <div className="border-l-2 border-primary pl-4 pb-1">
-                <h2 className="text-xl font-semibold mb-2">
-                  August 2024
-                </h2>
+                <h2 className="text-xl font-semibold mb-2">August 2024</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Developed an AI Flashcard App alongside my friend{" "}
-                    <a
-                      href="https://www.linkedin.com/in/anasmubashar/"
-                      className="text-grey-500 italic hover:underline"
-                    >
+                    Developed an AI Flashcard App with my friend{" "}
+                    <a href="https://www.linkedin.com/in/anasmubashar/" className="text-grey-500 italic hover:underline">
                       Anas
                     </a>{" "}
                     using Next.js and Firebase (Headstarter AI program) [
-                    <Link
-                      href="https://github.com/skanderkaroui/AI-Flashcard-App"
-                      className="link-blue"
-                    >
+                    <Link href="https://github.com/skanderkaroui/AI-Flashcard-App" className="link-blue">
                       Code
                     </Link>
                     ].
                   </li>
                   <li className="text-primary">
-                    Built an AI Customer Assistant alongside my friend{" "}
-                    <a
-                      href="https://www.linkedin.com/in/anasmubashar/"
-                      className="text-grey-500 italic hover:underline"
-                    >
+                    Built an AI Customer Assistant with my friend{" "}
+                    <a href="https://www.linkedin.com/in/anasmubashar/" className="text-grey-500 italic hover:underline">
                       Anas
                     </a>{" "}
                     using Next.js, Gemini API, and RAG (Headstarter AI program) [
-                    <Link
-                      href="https://github.com/skanderkaroui/customer-support-ai"
-                      className="link-blue"
-                    >
+                    <Link href="https://github.com/skanderkaroui/customer-support-ai" className="link-blue">
                       Code
                     </Link>
                     ].
@@ -595,19 +559,13 @@ export default function TimelinePage() {
                 <h2 className="text-xl font-semibold mb-2">July 2024</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Worked on a Pantry App Tracker using Next.js and Firebase as
-                    part of the Headstarter AI program [
-                    <Link
-                      href="https://pantryapp-pi.vercel.app/"
-                      className="link-blue"
-                    >
+                    Worked on a Pantry App Tracker using Next.js and Firebase as part
+                    of the Headstarter AI program [
+                    <Link href="https://pantryapp-pi.vercel.app/" className="link-blue">
                       Demo
                     </Link>
-                    ,
-                    <Link
-                      href="https://github.com/skanderkaroui/pantryapp"
-                      className="link-blue"
-                    >
+                    ,{" "}
+                    <Link href="https://github.com/skanderkaroui/pantryapp" className="link-blue">
                       Code
                     </Link>
                     ].
@@ -619,87 +577,62 @@ export default function TimelinePage() {
                 <h2 className="text-xl font-semibold mb-2">June 2024</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Started working on "auto," an AI voice assistant built using
-                    Faster Whisper, OpenAI, and Google Text-to-Speech [
-                    <Link
-                      href="https://github.com/skanderkaroui/auto"
-                      className="link-blue"
-                    >
+                    Completed 3 Nvidia certifications:
+                    <Link href="https://learn.nvidia.com/certificates?id=Pj1043ItSWKnf_--S-LMPQ" className="text-grey-500 italic hover:underline">
+                      {" "}DL Fundamentals
+                    </Link>
+                    {" · "}
+                    <Link href="https://learn.nvidia.com/certificates?id=ecpfbX4ETgeQhNl1n0PuyA" className="text-grey-500 italic hover:underline">
+                      Predictive Maintenance with AI
+                    </Link>
+                    {" · "}
+                    <Link href="https://learn.nvidia.com/certificates?id=7LNTaxf0QKGtbsnGZ_-vEQ" className="text-grey-500 italic hover:underline">
+                      Transformer NLP
+                    </Link>
+                  </li>
+                  <li className="text-primary">
+                    Also took part in the BirdCLEF Kaggle competition on species
+                    identification using EfficientNetV2.
+                  </li>
+                  <li className="text-primary">
+                    Started working on <strong>auto</strong>, an AI voice assistant built
+                    with Faster Whisper, OpenAI, and Google Text-to-Speech [
+                    <Link href="https://github.com/skanderkaroui/auto" className="link-blue">
                       Code
                     </Link>
                     ].
                   </li>
                   <li className="text-primary">
-                    Participated in Climate Change AI&apos;s{" "}
-                    <a
-                      href="https://www.climatechange.ai/events/summer_school2024"
-                      className="link-blue"
-                    >
+                    Took part in Climate Change AI&apos;s{" "}
+                    <a href="https://www.climatechange.ai/events/summer_school2024" className="link-blue">
                       virtual summer school
                     </a>
                     .
-                  </li>
-                  <li className="text-primary">
-                    Received 3 Nvidia AI certifications:
-                    <ul className="list-disc list-inside space-y-1 mt-1 pl-5">
-                      <li>
-                        <Link
-                          href="https://learn.nvidia.com/certificates?id=Pj1043ItSWKnf_--S-LMPQ"
-                          className="text-grey-500 italic hover:underline"
-                        >
-                          Fundamentals of Deep Learning
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="https://learn.nvidia.com/certificates?id=ecpfbX4ETgeQhNl1n0PuyA"
-                          className="text-grey-500 italic hover:underline"
-                        >
-                          Applications of AI for Predictive Maintenance
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="https://learn.nvidia.com/certificates?id=7LNTaxf0QKGtbsnGZ_-vEQ"
-                          className="text-grey-500 italic hover:underline"
-                        >
-                          Building Transformer-Based NLP Applications
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="text-primary">
-                    Participated in the BirdCLEF 2024 Kaggle competition where I worked on
-                    bird species identification using EfficientNetV2 [
-                    <a
-                      href="https://www.kaggle.com/code/skanderkaroui/birdclef24-skander-s-attempt-train/notebook"
-                      className="link-blue"
-                    >
-                      Notebook
-                    </a>
-                    ].
                   </li>
                 </ul>
               </div>
 
               <div className="border-l-2 border-primary pl-4 pb-1">
-                <h2 className="text-xl font-semibold mb-2">2023-2024</h2>
+                <h2 className="text-xl font-semibold mb-2">May 2024</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
                     Participated in IndabaX 2024 by developing a dental image
-                    object detection model utilizing Torchvision and ResNet
-                    architecture.
+                    object detection model using Torchvision and ResNet architecture.
                   </li>
-                  <li>
-                    Worked on a movie recommendation system alongside my friend
-                    {" "}
+                </ul>
+              </div>
+
+              <div className="border-l-2 border-primary pl-4 pb-1">
+                <h2 className="text-xl font-semibold mb-2">March 2024</h2>
+                <ul className="list-disc list-inside space-y-2">
+                  <li className="text-primary">
+                    Worked on a movie recommendation system with{" "}
                     <a
                       href="https://www.linkedin.com/in/oussama-boubaker-18aa15241/"
                       className="text-grey-500 italic hover:underline"
                     >
                       Oussama
-                    </a>{" "}, exploring user-based, item-based, and
-                    content-based collaboration [
+                    </a>, exploring user-based, item-based, and content-based approaches. [
                     <Link
                       href="https://github.com/skanderkaroui/collaborative_filtering_movie_recommendation"
                       className="link-blue"
@@ -708,20 +641,29 @@ export default function TimelinePage() {
                     </Link>
                     ].
                   </li>
+                </ul>
+              </div>
+
+              <div className="border-l-2 border-primary pl-4 pb-1">
+                <h2 className="text-xl font-semibold mb-2">September 2023</h2>
+                <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    I was selected as a Team Leader for{" "}
-                    <a
-                      className="link"
-                      href="https://www.facebook.com/RadioEnetcom/"
-                    >
-                      Orbeats Radio Club ENET'Com
-                    </a>{" "}
-                    where I served from June 2023 to June 2024.
+                    Selected as a Team Leader for{" "}
+                    <a className="link" href="https://www.facebook.com/RadioEnetcom/">
+                      Orbeats Radio Club ENET&apos;Com
+                    </a>
+                    , where I served from September 2023 to September 2024.
                   </li>
+                </ul>
+              </div>
+
+              <div className="border-l-2 border-primary pl-4 pb-1">
+                <h2 className="text-xl font-semibold mb-2">August 2023</h2>
+                <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Completed the Omdena Kenya Chapter project on shoplifting
-                    detection, deployed using a Streamlit app, and built using YOLOv8 and
-                    the PyTorchVideo library [
+                    Completed the Omdena Kenya Chapter project on shoplifting detection,
+                    deployed using Streamlit, and built with YOLOv8 and PyTorchVideo.
+                    [
                     <Link
                       href="https://github.com/skanderkaroui/omdena_shoplifting_detection"
                       className="link-blue"
@@ -730,17 +672,26 @@ export default function TimelinePage() {
                     </Link>
                     ].
                   </li>
+                </ul>
+              </div>
+
+              <div className="border-l-2 border-primary pl-4 pb-1">
+                <h2 className="text-xl font-semibold mb-2">June 2023</h2>
+                <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Interned at Elyadata as a Software Data Engineer, where I
-                    developed an Arabic document generation system for layout
-                    parsing using FastAPI and deployed it with Docker.
+                    Interned at Elyadata as a Software Data Engineer, where I built an
+                    Arabic document generation system for layout parsing using FastAPI and
+                    deployed it with Docker.
                   </li>
-                  <li>
+                </ul>
+              </div>
+
+              <div className="border-l-2 border-primary pl-4 pb-1">
+                <h2 className="text-xl font-semibold mb-2">June 2022</h2>
+                <ul className="list-disc list-inside space-y-2">
+                  <li className="text-primary">
                     Worked on{" "}
-                    <a
-                      href="https://archiveprepa.tn"
-                      className="link-blue"
-                    >
+                    <a href="https://archiveprepa.tn" className="link-blue">
                       archiveprepa.tn
                     </a>{" "}
                     alongside my friend{" "}
@@ -750,7 +701,8 @@ export default function TimelinePage() {
                     >
                       Insaf
                     </a>
-                    , a website for preparatory students generating 200k views per year.
+                    , a website for preparatory students reaching around 200k views per
+                    year.
                   </li>
                 </ul>
               </div>
