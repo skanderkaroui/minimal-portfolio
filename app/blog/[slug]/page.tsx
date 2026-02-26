@@ -87,9 +87,9 @@ export default async function BlogPostPage({
                     <p className="text-lg leading-relaxed">{children}</p>
                   ),
                   h1: ({ children }) => (
-                    <h2 className="text-2xl font-semibold mt-6 mb-2">
+                    <h1 className="text-2xl font-semibold mt-6 mb-2">
                       {children}
-                    </h2>
+                    </h1>
                   ),
                   h2: ({ children }) => (
                     <h2 className="text-2xl font-semibold mt-6 mb-2">
@@ -111,12 +111,12 @@ export default async function BlogPostPage({
                   ),
                   img: ({ src, alt }) => (
                     <div className="my-6 overflow-hidden rounded-lg">
-                    <img
-                      src={src}
-                      alt={alt ?? ""}
-                      className="h-auto w-full rounded-lg object-cover"
-                    />
-                  </div>
+                      <img
+                        src={src}
+                        alt={alt ?? ""}
+                        className="h-auto w-full rounded-lg object-cover"
+                      />
+                    </div>
                   ),
                 }}
               >
