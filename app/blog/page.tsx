@@ -21,11 +21,14 @@ export default function BlogPage() {
 
         <main>
           <section className="grid gap-6 md:grid-cols-2">
-            {blogPosts.map((post) => (
+            {blogPosts.map((post) => {
+              const isPublished = post.done === "Yes";
+
+              return (
               <Card key={post.id} className="flex flex-col">
                 <CardHeader>
                   <CardTitle className="text-xl">
-                    {post.done === "Yes" ? (
+                    {isPublished ? (
                       <Link href={`/blog/${post.titleUrl}`} className="hover:underline">
                         {post.title}
                       </Link>
@@ -42,8 +45,8 @@ export default function BlogPage() {
                   <p className="text-muted-foreground">{post.description}</p>
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  {post.done === "Yes" ? (
-                    <Link href={`/blog/${post.id}`} passHref>
+                  {isPublished ? (
+                    <Link href={`/blog/${post.titleUrl}`} passHref>
                       <Button variant="outline">Read More</Button>
                     </Link>
                   ) : (
@@ -51,7 +54,8 @@ export default function BlogPage() {
                   )}
                 </CardFooter>
               </Card>
-            ))}
+              );
+            })}
           </section>
         </main>
       </div>
