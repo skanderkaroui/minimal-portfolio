@@ -20,10 +20,13 @@ const LeetCodeStats = () => {
   const [solvedCount, setSolvedCount] = useState("around 150");
 
   useEffect(() => {
+    const controller = new AbortController();
+
     const fetchLeetCodeStats = async () => {
       try {
         const response = await fetch(
-          "https://leetcode-stats-api.herokuapp.com/skirrrrrra"
+          "https://leetcode-stats-api.herokuapp.com/skirrrrrra",
+          { signal: controller.signal },
         );
         const data = await response.json();
 
@@ -38,6 +41,10 @@ const LeetCodeStats = () => {
     };
 
     fetchLeetCodeStats();
+
+    return () => {
+      controller.abort();
+    };
   }, []);
 
   return <span>{solvedCount}</span>;
@@ -45,13 +52,6 @@ const LeetCodeStats = () => {
 
 export function PortfolioComponent() {
   const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    // Set the default theme to 'dark'
-    if (theme === "system") {
-      setTheme("dark");
-    }
-  }, [theme, setTheme]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -69,17 +69,11 @@ export function PortfolioComponent() {
           </Button>
           <Image
             src={SkanderImg}
-            alt={"Skander's Image"}
+            alt="Skander's Image"
             width={400}
             height={300}
-            style={{
-              objectFit: "cover",
-              marginTop: "100px",
-              marginLeft: "auto",
-              marginRight: "auto",
-              marginBottom: "30px",
-            }}
-            className="rounded-md mt-24 mb-8 mx-auto"
+            priority
+            className="rounded-md mt-24 mb-8 mx-auto object-cover"
           />
           <h1 className="text-3xl md:text-4xl font-bold mb-2">
             Skander Karoui
