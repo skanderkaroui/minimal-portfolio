@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ChevronLeft, Calendar, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ScrollProgress } from "@/components/ui/scroll-progress"
 
 export const metadata = {
   id: "1",
@@ -13,6 +14,7 @@ export const metadata = {
 export default function GettingStartedWithNextJs13() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <ScrollProgress />
       <div className="max-w-3xl mx-auto px-4 py-8 md:py-16">
         <Link href="/blog" passHref>
           <Button variant="ghost" className="mb-8">
