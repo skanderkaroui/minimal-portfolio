@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from 'next-themes'
 import { Analytics } from "@vercel/analytics/react"
 import { Poppins } from 'next/font/google';
+import { Lora } from "next/font/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,6 +25,12 @@ const poppins = Poppins({
   display: 'swap', // Optional: control font display behavior
 });
 
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Skander's Porfolio",
   description: "Skander Karoui's minimalistic porfolio",
@@ -39,7 +46,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable} ${lora.variable}`}
+    >
       <body className={poppins.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
