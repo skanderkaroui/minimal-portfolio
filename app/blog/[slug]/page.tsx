@@ -4,8 +4,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import type { ComponentPropsWithoutRef } from "react";
 
 import { Button } from "@/components/ui/button";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
@@ -22,7 +24,7 @@ type BlogPost = {
   image?: string;
   content?: string;
   contentPath?: string;
-  contentType?: "markdown" | "text";
+  contentType?: "markdown" | "text" | "html";
 };
 
 const publishedPosts = (blogPosts as BlogPost[]).filter(
@@ -40,7 +42,7 @@ async function getPostContent(post: BlogPost) {
     return (post.content ?? "This article is currently being prepared.").trim();
   }
 
-  if (post.contentType === "markdown" && post.contentPath) {
+  if ((post.contentType === "markdown" || post.contentType === "html") && post.contentPath) {
     try {
       const resolvedPath = path.join(process.cwd(), post.contentPath);
       return (await fs.readFile(resolvedPath, "utf8")).trim();
@@ -104,25 +106,36 @@ export default async function BlogPostPage({
           ) : (
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
               components={{
-                p: ({ children }) => <p>{children}</p>,
-                h1: ({ children }) => <h1>{children}</h1>,
-                h2: ({ children }) => <h2>{children}</h2>,
-                h3: ({ children }) => <h3>{children}</h3>,
-                h4: ({ children }) => <h4>{children}</h4>,
-                a: ({ href, children }) => (
-                  <a href={href}>{children}</a>
-                ),
-                ul: ({ children }) => <ul>{children}</ul>,
-                ol: ({ children }) => <ol className="my-6 list-decimal space-y-2 pl-6">{children}</ol>,
-                li: ({ children }) => <li>{children}</li>,
-                hr: () => <hr />,
-                blockquote: ({ children }) => <blockquote>{children}</blockquote>,
+                a: (props) => {
+                  const {
+                    href,
+                    children,
+                    target,
+                    rel,
+                    ...anchorProps
+                  } = props as ComponentPropsWithoutRef<"a">;
+
+                  const isExternalLink = href?.startsWith("http");
+
+                  return (
+                    <a
+                      href={href}
+                      target={target ?? (isExternalLink ? "_blank" : undefined)}
+                      rel={rel ?? (isExternalLink ? "noopener noreferrer" : undefined)}
+                      {...anchorProps}
+                    >
+                      {children}
+                    </a>
+                  );
+                },
                 img: ({ src, alt }) => (
                   <img
                     src={src}
                     alt={alt ?? ""}
                     loading="lazy"
+                    className="rounded-md substack-image"
                   />
                 ),
               }}
