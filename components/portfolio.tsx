@@ -89,12 +89,12 @@ export function PortfolioComponent() {
             Skander Karoui
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground">
-            Telecommunication Engineer
+            AI Engineer
           </p>
           <p className="text-lg md:text-xl text-muted-foreground mb-4">
-            Working on <span className="font-bold text-primary">AI</span>{" "}
+            Working on <span className="font-bold text-primary">AI agents</span>{" "}
             &{" "}
-            <span className="font-bold text-primary">Software Engineering</span>
+            <span className="font-bold text-primary">Full Stack Development</span>
           </p>
           <nav className="flex flex-wrap justify-center space-x-4 mb-4">
             <Link href="#about" className="hover:underline">
