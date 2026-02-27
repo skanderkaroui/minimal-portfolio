@@ -1,82 +1,25 @@
-"use client";
-
 import {
   Github,
   Linkedin,
   Mail,
-  Moon,
-  Sun,
   Instagram,
   Facebook,
 } from "lucide-react";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
 import Image from "next/image";
+import {
+  LeetCodeStats,
+  PortfolioClientControls,
+} from "@/components/portfolio-client";
 import { Button } from "@/components/ui/button";
 import SkanderImg from "@/app/data/images/fun-sf-pic.jpg";
 
-const LeetCodeStats = () => {
-  const [solvedCount, setSolvedCount] = useState("around 150");
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    const fetchLeetCodeStats = async () => {
-      try {
-        const response = await fetch(
-          "https://leetcode-stats-api.herokuapp.com/skirrrrrra",
-          { signal: controller.signal },
-        );
-        if (!response.ok) {
-          throw new Error(`Failed request: ${response.status}`);
-        }
-        const data = await response.json();
-
-        if (controller.signal.aborted) return;
-
-        if (data.status === "success") {
-          setSolvedCount(data.totalSolved.toString());
-        } else {
-          console.error("Failed to fetch LeetCode stats:", data.message);
-        }
-      } catch (error) {
-        if (error instanceof DOMException && error.name === "AbortError") {
-          return;
-        }
-        console.error("Failed to fetch LeetCode stats:", error);
-      }
-    };
-
-    fetchLeetCodeStats();
-
-    return () => {
-      if (!controller.signal.aborted) {
-        controller.abort();
-      }
-    };
-  }, []);
-
-  return <span>{solvedCount}</span>;
-};
-
 export function PortfolioComponent() {
-  const { theme, setTheme } = useTheme();
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="max-w-3xl mx-auto px-4 my-4">
         <header className="mb-16 text-center relative">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-0 top-0"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          >
-            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
-          </Button>
+          <PortfolioClientControls />
           <Image
             src={SkanderImg}
             alt="Skander's Image"
