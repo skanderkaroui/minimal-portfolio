@@ -84,10 +84,9 @@ export function PortfolioComponent() {
           <section id="about">
             <div className="text-center">
               <p className="text-primary">
-                AI Engineer <em>(telecom background)</em> specializing in AI
-                Agents, with hands-on experience building full-stack production
-                systems end to end from frontend, backend to cloud
-                deployment.
+                I'm an AI Engineer specializing in AI Agents, with hands-on
+                experience building full-stack production systems end to end from
+                frontend, backend to cloud deployment.
               </p>
             </div>
           </section>
