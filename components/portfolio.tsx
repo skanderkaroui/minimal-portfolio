@@ -94,7 +94,7 @@ export function PortfolioComponent() {
           <p className="text-lg md:text-xl text-muted-foreground mb-4">
             Working on <span className="font-bold text-primary">AI agents</span>{" "}
             &{" "}
-            <span className="font-bold text-primary">Full Stack Development</span>
+            <span className="font-bold text-primary">Full Stack Dev</span>
           </p>
           <nav className="flex flex-wrap justify-center space-x-4 mb-4">
             <Link href="#about" className="hover:underline">
@@ -141,9 +141,10 @@ export function PortfolioComponent() {
           <section id="about">
             <div className="text-center">
               <p className="text-primary">
-                I am a Telecommunication engineer just recently graduated from ENET'Com. Primarily
-                interested in AI and startups, and actively working
-                on new exciting projects everyday.
+                AI Engineer <em>(telecom background)</em> specializing in AI
+                Agents, with hands-on experience building full-stack production
+                systems end to end from frontend, backend to cloud
+                deployment.
               </p>
             </div>
           </section>
@@ -175,7 +176,7 @@ export function PortfolioComponent() {
                 >
                   Grais
                 </a>
-                , we are building a conversational AI agent designed for social media,
+                {" "}<em>(backed by Google)</em>, we are building a conversational AI agent designed for social media,
                 think of it as Cursor but for Whatsapp
               </li>
               <li>
