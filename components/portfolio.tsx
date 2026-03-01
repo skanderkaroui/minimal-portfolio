@@ -288,13 +288,27 @@ export function PortfolioComponent() {
               I&apos;m always open to new opportunities and collaborations, so
               feel free to reach out to me.
             </p>
-            <div className="flex justify-center space-x-4 px-4 my-4 mb-6">
-              <Button asChild>
-                <Link href="mailto:skander.karoui@gmail.com">
-                  Contact me <Mail className="ml-2 h-4 w-4" />
-                </Link>
+            <form
+              action="https://submit-form.com/fwnVjhiTF"
+              method="POST"
+              className="mx-auto mt-4 flex w-full max-w-md flex-col sm:flex-row gap-3 items-start sm:items-end"
+            >
+              <label htmlFor="email" className="sr-only">
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                aria-label="Email address"
+                placeholder="boukraa@gmail.com"
+                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 dark:bg-background dark:text-foreground"
+              />
+              <Button type="submit" className="w-full sm:w-auto">
+                Send
               </Button>
-            </div>
+            </form>
             <p className="text-primaryforeground mb-4">
               If you're interested in checking out my other socials, you can
               find them here:
