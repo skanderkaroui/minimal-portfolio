@@ -1,4 +1,13 @@
-import { Calendar, ChevronLeft, Clock } from "lucide-react";
+import {
+  Calendar,
+  ChevronLeft,
+  Clock,
+  Facebook,
+  Github,
+  Instagram,
+  Linkedin,
+  Mail,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -12,6 +21,7 @@ import type { ComponentPropsWithoutRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import blogPosts from "@/app/data/blogpost.json";
+import { BlogEmailSubscribeForm } from "@/components/blog-email-subscribe";
 
 type BlogPost = {
   id: string;
@@ -65,9 +75,9 @@ export default async function BlogPostPage({
   const content = await getPostContent(post);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
       <ScrollProgress />
-      <div className="mx-auto max-w-3xl px-4 py-8 md:py-16">
+      <main className="mx-auto flex-1 w-full max-w-3xl px-4 py-8 md:py-16">
         <Link href="/blog" passHref>
           <Button variant="ghost" className="mb-6">
             <ChevronLeft className="mr-2 h-4 w-4" />
@@ -144,7 +154,78 @@ export default async function BlogPostPage({
             </ReactMarkdown>
           )}
         </article>
-      </div>
+
+        <section className="mx-auto mt-10 mb-16 max-w-3xl">
+          <BlogEmailSubscribeForm />
+        </section>
+
+        </main>
+
+        <footer className="w-full border-t border-border mt-auto">
+          <div className="mx-auto flex max-w-3xl flex-col items-center justify-between gap-4 px-4 pb-6 sm:flex-row-reverse sm:py-4">
+            <div className="flex flex-wrap justify-center gap-1">
+              <a
+                href="https://github.com/skanderkaroui"
+                className="group inline-block p-2 hover:text-[#6f4cff] hover:rotate-6 sm:p-1"
+                title="Skander Karoui on GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="inline-block size-6 scale-125 opacity-90 transition-transform group-hover:scale-110" />
+                <span className="sr-only">Skander Karoui on GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/skander-karoui"
+                className="group inline-block p-2 hover:text-[#0A66C2] hover:rotate-6 sm:p-1"
+                title="Skander Karoui on LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="inline-block size-6 scale-125 opacity-90 transition-transform group-hover:scale-110" />
+                <span className="sr-only">Skander Karoui on LinkedIn</span>
+              </a>
+              <a
+                href="https://www.facebook.com/skander.karoui/"
+                className="group inline-block p-2 hover:text-[#0866FF] hover:rotate-6 sm:p-1"
+                title="Skander Karoui on Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook className="inline-block size-6 scale-125 opacity-90 transition-transform group-hover:scale-110" />
+                <span className="sr-only">Skander Karoui on Facebook</span>
+              </a>
+              <a
+                href="https://www.instagram.com/skander_karoui"
+                className="group inline-block p-2 hover:text-[#E4405F] hover:rotate-6 sm:p-1"
+                title="Skander Karoui on Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="inline-block size-6 scale-125 opacity-90 transition-transform group-hover:scale-110" />
+                <span className="sr-only">Skander Karoui on Instagram</span>
+              </a>
+              <a
+                href="mailto:skander.karoui@gmail.com"
+                className="group inline-block p-2 hover:text-[#6f4cff] hover:rotate-6 sm:p-1"
+                title="Send an email to Skander Karoui"
+              >
+                <Mail className="inline-block size-6 scale-125 opacity-90 transition-transform group-hover:scale-110" />
+                <span className="sr-only">Send an email to Skander Karoui</span>
+              </a>
+            </div>
+
+            <div className="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
+              <a
+                href="mailto:skander.karoui@gmail.com"
+                className="hover:text-[#A97CF8] text-sm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                © {new Date().getFullYear()} Skander Karoui
+              </a>
+            </div>
+          </div>
+        </footer>
     </div>
   );
 }
