@@ -197,7 +197,11 @@
   }
 
   .blog-article-shell .substack-caption {
-    @apply mt-2 text-sm text-muted-foreground;
+    @apply mt-1 mb-0 text-sm italic text-muted-foreground;
+  }
+
+  .blog-article-shell .substack-caption + p {
+    @apply mt-8;
   }
 
   .blog-article-shell blockquote {
