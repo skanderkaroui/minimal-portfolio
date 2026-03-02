@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const SUBMIT_COOLDOWN_MS = 5 * 60 * 1000;
-const SUBSCRIBE_CACHE_VERSION = 2;
+const SUBSCRIBE_CACHE_VERSION = 3;
 const COOLDOWN_CACHE_PREFIX = `blog-email-subscribe-cooldown-v${SUBSCRIBE_CACHE_VERSION}`;
 const SUCCESS_CACHE_PREFIX = `blog-email-subscribe-success-v${SUBSCRIBE_CACHE_VERSION}`;
 const SUCCESS_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
