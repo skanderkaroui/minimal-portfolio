@@ -91,10 +91,17 @@ export function BlogEmailSubscribeForm() {
     }
 
     try {
+      const payload = Object.fromEntries(
+        formData.entries(),
+      ) as Record<string, string>;
+
       const response = await fetch("https://submit-form.com/fwnVjhiTF", {
         method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
+        body: JSON.stringify(payload),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
       });
 
       const responseText = await response.text();
