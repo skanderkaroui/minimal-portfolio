@@ -47,14 +47,20 @@ export const LeetCodeStats = () => {
   return <span>{solvedCount}</span>;
 };
 
-export function PortfolioClientControls() {
+export function PortfolioClientControls({
+  className,
+}: {
+  className?: string;
+}) {
   const { theme, setTheme } = useTheme();
+  const buttonClassName =
+    className ?? "absolute right-0 top-0";
 
   return (
     <Button
       variant="ghost"
       size="icon"
-      className="absolute right-0 top-0"
+      className={buttonClassName}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label="Toggle theme"
     >
