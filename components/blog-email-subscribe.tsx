@@ -90,7 +90,56 @@ export function BlogEmailSubscribeForm() {
         headers: { Accept: "application/json" },
       });
 
-      if (!response.ok) {
+      const responseText = await response.text();
+      const normalizedPayload = responseText.trim().toLowerCase();
+      let payload: Record<string, unknown> | null = null;
+
+      try {
+        payload = responseText ? (JSON.parse(responseText) as Record<string, unknown>) : null;
+      } catch {
+        payload = null;
+      }
+
+      const hasKnownFailure =
+        (payload && "error" in payload) ||
+        (payload && "status" in payload && payload.status === "error") ||
+        (payload && "message" in payload && typeof payload.message === "string" && payload.message.toLowerCase().includes("error")) ||
+        (payload && "ok" in payload && payload.ok === false) ||
+        (payload && "success" in payload && payload.success === false) ||
+        (payload && "result" in payload && payload.result === "error") ||
+        (normalizedPayload.includes("<!doctype html>") ||
+          normalizedPayload.includes("<html") ||
+          normalizedPayload.includes("<head"));
+
+      const isKnownSuccess =
+        response.ok &&
+        !hasKnownFailure &&
+        (!payload ||
+          !("ok" in payload) ||
+          payload.ok === true ||
+          !("success" in payload) ||
+          payload.success === true ||
+          !("result" in payload) ||
+          payload.result === "ok" ||
+          payload.result === "success" ||
+          !("status" in payload) ||
+          payload.status === "success" ||
+          payload.status === "ok" ||
+          (typeof payload.message === "string" && payload.message.toLowerCase().includes("success")));
+
+      if (!isKnownSuccess) {
+        if (response.status === 302) {
+          throw new Error("Expected JSON success response but received redirect.");
+        }
+
+        if (process.env.NODE_ENV === "development") {
+          console.warn("Formspark submit response was not successful", {
+            status: response.status,
+            payload,
+            body: normalizedPayload,
+          });
+        }
+
         throw new Error("Submission failed");
       }
 
@@ -105,9 +154,12 @@ export function BlogEmailSubscribeForm() {
         }),
       );
       setStatus("success");
-    } catch {
+    } catch (error) {
       setStatus("error");
       setMessage("Unable to send right now. Try again.");
+      if (process.env.NODE_ENV === "development") {
+        console.error("Blog form submission failed", error);
+      }
     }
   };
 
