@@ -6,8 +6,11 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const SUBMIT_COOLDOWN_MS = 5 * 60 * 1000;
-const SUCCESS_CACHE_PREFIX = "blog-email-subscribe-success";
+const SUBSCRIBE_CACHE_VERSION = 2;
+const COOLDOWN_CACHE_PREFIX = `blog-email-subscribe-cooldown-v${SUBSCRIBE_CACHE_VERSION}`;
+const SUCCESS_CACHE_PREFIX = `blog-email-subscribe-success-v${SUBSCRIBE_CACHE_VERSION}`;
 const SUCCESS_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+const SUCCESS_CACHE_STATUS = "success";
 
 export function BlogEmailSubscribeForm() {
   const [status, setStatus] = useState<
@@ -28,10 +31,14 @@ export function BlogEmailSubscribeForm() {
       const parsed = JSON.parse(raw) as {
         email: string;
         status: "success";
+        v: number;
         timestamp: number;
       };
 
-      if (parsed?.status !== "success") return;
+      if (parsed?.status !== SUCCESS_CACHE_STATUS || parsed?.v !== SUBSCRIBE_CACHE_VERSION) {
+        localStorage.removeItem(storageKey);
+        return;
+      }
 
       const isFresh = Number.isFinite(parsed.timestamp)
         && Date.now() - parsed.timestamp < SUCCESS_CACHE_TTL_MS;
@@ -73,7 +80,7 @@ export function BlogEmailSubscribeForm() {
       return;
     }
 
-    const storageKey = `blog-email-subscribe-${email}`;
+    const storageKey = `${COOLDOWN_CACHE_PREFIX}:${email}`;
     const lastSubmitAt = Number(localStorage.getItem(storageKey) || 0);
     const now = Date.now();
 
@@ -148,8 +155,9 @@ export function BlogEmailSubscribeForm() {
       localStorage.setItem(
         `${SUCCESS_CACHE_PREFIX}:${window.location.pathname}`,
         JSON.stringify({
-          status: "success" as const,
+          status: SUCCESS_CACHE_STATUS,
           email,
+          v: SUBSCRIBE_CACHE_VERSION,
           timestamp: now,
         }),
       );
