@@ -137,6 +137,31 @@ export function PortfolioComponent() {
             </h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>
+                I was recently in SF, where I attended{" "}
+                <a
+                  href="https://siliconvalleyfellowship.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-blue"
+                >
+                  Silicon Valley Fellowship
+                </a>{" "}
+                and took part in{" "}
+                <a
+                  href="https://treehacks.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-blue"
+                >
+                  TreeHacks
+                </a>{" "}
+                in San Francisco. I wrote a blog about it{" "}
+                <a href="/blog/chapter-sf" className="link-blue">
+                  here
+                </a>
+                .
+              </li>
+              <li>
                 Built an AI voice assistant called "auto" designed to help make better
                 decisions in meetings
               </li>
@@ -230,27 +255,6 @@ export function PortfolioComponent() {
               I&apos;m always open to new opportunities and collaborations, so
               feel free to reach out to me.
             </p>
-            <form
-              action="https://submit-form.com/fwnVjhiTF"
-              method="POST"
-              className="mx-auto mt-4 flex w-full max-w-md flex-col sm:flex-row gap-3 items-start sm:items-end"
-            >
-              <label htmlFor="email" className="sr-only">
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                aria-label="Email address"
-                placeholder="boukraa@gmail.com"
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 dark:bg-background dark:text-foreground"
-              />
-              <Button type="submit" className="w-full sm:w-auto">
-                Send
-              </Button>
-            </form>
             <p className="text-primaryforeground mb-4">
               If you're interested in checking out my other socials, you can
               find them here:
@@ -281,7 +285,7 @@ export function PortfolioComponent() {
         </main>
 
         <footer className="mt-16 text-center text-muted-foreground">
-          <p>© 2024 Skander Karoui. No rights reserved 😝.</p>
+          <p>Last updated: 02 Mar 2026</p>
         </footer>
       </div>
     </div>
