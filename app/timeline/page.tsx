@@ -145,22 +145,22 @@ const timelineData = [
     variant: "default" as const
   },
   {
-    title: "Software Engineer @ ReplyPilot",
+    title: "AI Engineer Intern @ Grais",
     description: (
       <p>
-        Worked as a Software Engineer at ReplyPilot, reviewing and testing the codebase
-        to improve stability and reliability.
+        Started as an AI Engineer Intern at Grais, building conversational AI systems
+        with RAG and end-to-end frontend/backend integrations.
       </p>
     ),
     date: new Date("2025-01-22"),
     variant: "secondary" as const
   },
   {
-    title: "AI Engineer Intern @ Grais",
+    title: "Software Engineer (Part-time) @ ReplyPilot",
     description: (
       <p>
-        Started as an AI Engineer Intern at Grais, building conversational AI systems
-        with RAG and end-to-end frontend/backend integrations.
+        Worked as a Part-time Software Engineer at ReplyPilot, reviewing and testing
+        the codebase to improve stability and reliability.
       </p>
     ),
     date: new Date("2024-12-01"),
@@ -213,8 +213,17 @@ const timelineData = [
     ),
     description: (
       <p>
-        Started as the first engineer in the team and worked on conversational AI
-        systems, implementing end-to-end solutions from frontend to backend and cloud deployment.
+        Started position as Founding AI Engineer at{" "}
+        <a
+          href="https://grais.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-blue"
+        >
+          Grais
+        </a>{" "}
+        , as the first engineer, building the system from 0 → 1 and implementing
+        end-to-end solutions from frontend to backend and cloud deployment.
       </p>
     ),
     date: new Date("2025-06-15"),
@@ -224,9 +233,19 @@ const timelineData = [
     title: "EF Builders League Hackathon",
     description: (
       <p>
-        Took part in EF&apos;s Builders League, selected among many applicants, and
-        built an end-to-end multi-AI agent system for lead generation where you can
-        describe your target businesses. Built from the same work that later led to{" "}
+        Took part in{" "}
+        <a
+          href="https://french-acc.github.io/ebl/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-blue"
+        >
+          European Founders&apos; (EF) Builders League
+        </a>
+        , hosted by Entrepreneurs First, where I was selected among many applicants
+        and built an end-to-end multi-AI
+        agent system for lead generation by defining target businesses. Built from the
+        same work that later led to{" "}
         <a
           href="https://ormelo.tech"
           target="_blank"
@@ -454,7 +473,18 @@ export default function TimelinePage() {
                     ].
                   </li>
                   <li className="text-primary">
-                    Started as the first engineer in the team and worked on conversational AI systems, implementing end-to-end solutions from frontend to backend and cloud deployment.
+                    Started position as Founding AI Engineer at{" "}
+                    <a
+                      href="https://grais.ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-blue"
+                    >
+                      Grais
+                    </a>{" "}
+                    , as the first engineer, building the system from 0 → 1 and
+                    implementing end-to-end solutions from frontend to backend and
+                    cloud deployment.
                   </li>
                   <li className="text-primary">
                     Graduated from ENET&apos;Com with a degree in telecommunications engineering.
@@ -466,9 +496,19 @@ export default function TimelinePage() {
                 <h2 className="text-xl font-semibold mb-2">May 2025</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Took part in EF&apos;s Builders League, where I was selected among many
-                    applicants and built an end-to-end multi-AI agent system for lead
-                    generation by defining target businesses. The project later led to{" "}
+                    Took part in{" "}
+                    <a
+                      href="https://french-acc.github.io/ebl/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-blue"
+                  >
+                    European Founders&apos; (EF) Builders League
+                  </a>
+                    , hosted by Entrepreneurs First, where I was selected among many
+                    applicants and built an end-to-end
+                    multi-AI agent system for lead generation by defining target
+                    businesses. The project later led to{" "}
                     <a
                       href="https://ormelo.tech"
                       target="_blank"
@@ -495,8 +535,8 @@ export default function TimelinePage() {
                 <h2 className="text-xl font-semibold mb-2">January 2025</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Worked as a Software Engineer at ReplyPilot, reviewing and testing
-                    the codebase to improve stability and reliability.
+                    Started as an AI Engineer Intern at Grais, building conversational AI
+                    systems with RAG and end-to-end frontend/backend integrations.
                   </li>
                 </ul>
               </div>
@@ -505,8 +545,8 @@ export default function TimelinePage() {
                 <h2 className="text-xl font-semibold mb-2">December 2024</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
-                    Started as an AI Engineer Intern at Grais, building conversational AI
-                    systems with RAG and end-to-end frontend/backend integrations.
+                    Worked as a Part-time Software Engineer at ReplyPilot, reviewing
+                    and testing the codebase to improve stability and reliability.
                   </li>
                 </ul>
               </div>
