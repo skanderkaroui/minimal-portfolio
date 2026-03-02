@@ -107,26 +107,28 @@ export function BlogEmailSubscribeForm() {
       const responseText = await response.text();
       const contentType = response.headers.get("content-type") ?? "";
       const normalizedPayload = responseText.trim().toLowerCase();
-      let payload: Record<string, unknown> | null = null;
+      let responsePayload: Record<string, unknown> | null = null;
 
       if (contentType.includes("application/json")) {
         try {
-          payload = responseText ? (JSON.parse(responseText) as Record<string, unknown>) : null;
+          responsePayload = responseText
+            ? (JSON.parse(responseText) as Record<string, unknown>)
+            : null;
         } catch {
-          payload = null;
+          responsePayload = null;
         }
       }
 
       const hasKnownFailure =
-        (payload && "error" in payload) ||
-        (payload && "status" in payload && payload.status === "error") ||
-        (payload &&
-          "message" in payload &&
-          typeof payload.message === "string" &&
-          payload.message.toLowerCase().includes("error")) ||
-        (payload && "ok" in payload && payload.ok === false) ||
-        (payload && "success" in payload && payload.success === false) ||
-        (payload && "result" in payload && payload.result === "error");
+        (responsePayload && "error" in responsePayload) ||
+        (responsePayload && "status" in responsePayload && responsePayload.status === "error") ||
+        (responsePayload &&
+          "message" in responsePayload &&
+          typeof responsePayload.message === "string" &&
+          responsePayload.message.toLowerCase().includes("error")) ||
+        (responsePayload && "ok" in responsePayload && responsePayload.ok === false) ||
+        (responsePayload && "success" in responsePayload && responsePayload.success === false) ||
+        (responsePayload && "result" in responsePayload && responsePayload.result === "error");
 
       if (!response.ok) {
         if (process.env.NODE_ENV === "development") {
@@ -143,7 +145,7 @@ export function BlogEmailSubscribeForm() {
         if (process.env.NODE_ENV === "development") {
           console.warn("Formspark submit response indicates error state", {
             status: response.status,
-            payload,
+            responsePayload,
             body: normalizedPayload,
           });
         }
