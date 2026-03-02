@@ -22,6 +22,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import blogPosts from "@/app/data/blogpost.json";
 import { BlogEmailSubscribeForm } from "@/components/blog-email-subscribe";
+import { PortfolioClientControls } from "@/components/portfolio-client";
 
 type BlogPost = {
   id: string;
@@ -78,12 +79,15 @@ export default async function BlogPostPage({
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <ScrollProgress />
       <main className="mx-auto flex-1 w-full max-w-3xl px-4 py-8 md:py-16">
-        <Link href="/blog" passHref>
-          <Button variant="ghost" className="mb-6">
-            <ChevronLeft className="mr-2 h-4 w-4" />
-            Back to Blog
-          </Button>
-        </Link>
+        <div className="mb-6 flex items-center justify-between">
+          <Link href="/blog" passHref>
+            <Button variant="ghost">
+              <ChevronLeft className="mr-2 h-4 w-4" />
+              Back to Blog
+            </Button>
+          </Link>
+          <PortfolioClientControls className="ml-4" />
+        </div>
 
         <article className="blog-article-shell font-bookerly">
           <header className="border-b border-border pb-8">
