@@ -124,7 +124,7 @@ export function PortfolioComponent() {
             </h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                Previously worked as Founding AI Engineer at{" "}
+                Prev. Founding AI Engineer at{" "}
                 <a
                   href="https://grais.ai/"
                   target="_blank"
