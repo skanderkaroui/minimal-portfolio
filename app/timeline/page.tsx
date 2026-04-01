@@ -209,11 +209,11 @@ const timelineData = [
   },
   {
     title: (
-      <span className="text-black dark:text-white">Founding AI Engineer @ Grais</span>
+      <span className="text-black dark:text-white">Joined Grais as Founding AI Engineer</span>
     ),
     description: (
       <p>
-        Started position as Founding AI Engineer at{" "}
+        Worked as Founding AI Engineer at{" "}
         <a
           href="https://grais.ai"
           target="_blank"
@@ -221,12 +221,12 @@ const timelineData = [
           className="link-blue"
         >
           Grais
-        </a>{" "}
+        </a>
         , as the first engineer, building the system from 0 → 1 and implementing
         end-to-end solutions from frontend to backend and cloud deployment.
       </p>
     ),
-    date: new Date("2025-06-15"),
+    date: new Date("2026-04-01"),
     variant: "destructive" as const,
   },
   {
@@ -430,6 +430,26 @@ export default function TimelinePage() {
           {isListView ? (
             <section className="space-y-8">
               <div className="border-l-2 border-primary pl-4 pb-1">
+                <h2 className="text-xl font-semibold mb-2">April 2026</h2>
+                <ul className="list-disc list-inside space-y-2">
+                  <li className="text-primary">
+                    Worked as Founding AI Engineer at{" "}
+                    <a
+                      href="https://grais.ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-blue"
+                    >
+                      Grais
+                    </a>{" "}
+                    , as the first engineer, building the system from 0 → 1 and
+                    implementing end-to-end solutions from frontend to backend and
+                    cloud deployment.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="border-l-2 border-primary pl-4 pb-1">
                 <h2 className="text-xl font-semibold mb-2">February 2026</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
@@ -471,20 +491,6 @@ export default function TimelinePage() {
                       slides
                     </a>
                     ].
-                  </li>
-                  <li className="text-primary">
-                    Started position as Founding AI Engineer at{" "}
-                    <a
-                      href="https://grais.ai"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-blue"
-                    >
-                      Grais
-                    </a>{" "}
-                    , as the first engineer, building the system from 0 → 1 and
-                    implementing end-to-end solutions from frontend to backend and
-                    cloud deployment.
                   </li>
                   <li className="text-primary">
                     Graduated from ENET&apos;Com with a degree in telecommunications engineering.
