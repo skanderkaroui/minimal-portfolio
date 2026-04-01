@@ -109,19 +109,6 @@ export function PortfolioComponent() {
                   , an AI agent that scours the internet and finds you, your ideal customer.
               </li>
               <li>
-                Founding AI Engineer at{" "}
-                <a
-                  href="https://grais.ai/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-blue"
-                >
-                  Grais
-                </a>
-                {" "}<em>(backed by Google)</em>, we are building a conversational AI agent designed for social media,
-                think of it as Cursor but for Whatsapp
-              </li>
-              <li>
                 Learning about data structures and algorithms while solving
                 LeetCode problems, currently solved{" "}
                 <a href="https://leetcode.com/skirrrrrra" className="link-blue">
@@ -136,6 +123,18 @@ export function PortfolioComponent() {
               What I've done so far
             </h2>
             <ul className="list-disc pl-5 space-y-1">
+              <li>
+                Prev. Founding AI Engineer at{" "}
+                <a
+                  href="https://grais.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-blue"
+                >
+                  Grais
+                </a>
+                {" "}<em>(backed by Google)</em>, where I was the first engineer building a conversational AI agent for social media, like Cursor for WhatsApp
+              </li>
               <li>
                 I was recently in SF, where I attended{" "}
                 <a
