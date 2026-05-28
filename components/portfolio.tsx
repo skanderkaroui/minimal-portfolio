@@ -99,12 +99,12 @@ export function PortfolioComponent() {
               <li>
                 Working on {" "}
                 <a
-                  href="https://www.ormelo.tech/"
+                  href="https://www.ormedo.tech/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-blue"
                 >
-                   Ormelo
+                   Ormedo
                   </a>
                   , an AI agent that scours the internet and finds you, your ideal customer.
               </li>
