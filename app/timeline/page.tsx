@@ -14,6 +14,25 @@ import {
 
 const timelineData = [
   {
+    title: "Full-time on Ormedo",
+    description: (
+      <p>
+        Started working full-time on{" "}
+        <a
+          href="https://www.ormedo.tech/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-blue"
+        >
+          Ormedo
+        </a>
+        , an AI agent that scours the internet and finds you, your ideal customer.
+      </p>
+    ),
+    date: new Date("2026-03-01"),
+    variant: "destructive" as const
+  },
+  {
     title: "Silicon Valley Fellowship",
     description: (
       <p>
@@ -429,6 +448,25 @@ export default function TimelinePage() {
         <main>
           {isListView ? (
             <section className="space-y-8">
+              <div className="border-l-2 border-primary pl-4 pb-1">
+                <h2 className="text-xl font-semibold mb-2">March 2026</h2>
+                <ul className="list-disc list-inside space-y-2">
+                  <li className="text-primary">
+                    Started working full-time on{" "}
+                    <a
+                      href="https://www.ormedo.tech/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-blue"
+                    >
+                      Ormedo
+                    </a>
+                    , an AI agent that scours the internet and finds you, your ideal
+                    customer.
+                  </li>
+                </ul>
+              </div>
+
               <div className="border-l-2 border-primary pl-4 pb-1">
                 <h2 className="text-xl font-semibold mb-2">February 2026</h2>
                 <ul className="list-disc list-inside space-y-2">
