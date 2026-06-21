@@ -226,7 +226,7 @@ const timelineData = [
         end-to-end solutions from frontend to backend and cloud deployment.
       </p>
     ),
-    date: new Date("2026-04-01"),
+    date: new Date("2025-04-01"),
     variant: "destructive" as const,
   },
   {
@@ -430,26 +430,6 @@ export default function TimelinePage() {
           {isListView ? (
             <section className="space-y-8">
               <div className="border-l-2 border-primary pl-4 pb-1">
-                <h2 className="text-xl font-semibold mb-2">April 2026</h2>
-                <ul className="list-disc list-inside space-y-2">
-                  <li className="text-primary">
-                    Worked as Founding AI Engineer at{" "}
-                    <a
-                      href="https://grais.ai"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-blue"
-                    >
-                      Grais
-                    </a>{" "}
-                    , as the first engineer, building the system from 0 → 1 and
-                    implementing end-to-end solutions from frontend to backend and
-                    cloud deployment.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="border-l-2 border-primary pl-4 pb-1">
                 <h2 className="text-xl font-semibold mb-2">February 2026</h2>
                 <ul className="list-disc list-inside space-y-2">
                   <li className="text-primary">
@@ -533,6 +513,26 @@ export default function TimelinePage() {
                       More here
                     </a>
                     ].
+                  </li>
+                </ul>
+              </div>
+
+              <div className="border-l-2 border-primary pl-4 pb-1">
+                <h2 className="text-xl font-semibold mb-2">April 2025</h2>
+                <ul className="list-disc list-inside space-y-2">
+                  <li className="text-primary">
+                    Worked as Founding AI Engineer at{" "}
+                    <a
+                      href="https://grais.ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-blue"
+                    >
+                      Grais
+                    </a>{" "}
+                    , as the first engineer, building the system from 0 → 1 and
+                    implementing end-to-end solutions from frontend to backend and
+                    cloud deployment.
                   </li>
                 </ul>
               </div>
